@@ -1,0 +1,442 @@
+<!doctype html>
+
+<html lang="ko">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet">
+
+<link rel="stylesheet" href="bootstrap.css">
+<link rel="stylesheet" href="normalize.min.css">
+<link rel="stylesheet" href="font-awesome.min.css">
+<link rel="stylesheet" href="animate.css">
+<link rel="stylesheet" href="templatemo-misc.css">
+<link rel="stylesheet" href="templatemo-style.css">
+
+<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+<head>
+  <meta charset="utf-8">
+
+<title>구직자 회원가입</title>
+
+<script type="text/javascript">
+function checkemailaddy(){
+  var v=document.forms[0];
+        if (v.p_email_select.value == '1') {
+            v.p_email2.readonly = false;
+            v.p_email2.value = '';
+            v.p_email2.focus();
+        }
+        else {
+            v.p_email2.readonly = true;
+            v.p_email2.value = v.p_email_select.value;
+        }
+    }
+function checkfield(){
+
+var f=document.forms[0];
+
+ if(f.p_id.value==""){ //id값이 없을 경우
+ confirm("아이디를 입력하세요");         //메세지 경고창을 띄운 후
+ f.p_id.focus();     // id 텍스트박스에 커서를 위치
+ return;
+
+ }else if(f.p_password.value==""){
+ confirm("비밀번호를 입력하세요");
+ f.p_password.focus();
+ return;
+
+ }else if(f.p_check_password.value==""){
+ alert("비밀번호를 입력하세요");
+ f.p_check_password.focus();
+ return;
+
+ }else if(f.p_password.value!=f.p_check_password.value){
+ //비밀번호와 비밀번호확인의 값이 다를 경우
+ alert("입력한 2개의 비밀번호가 일치하지 않습니다.");
+ f.p_check_password.focus();
+ return;
+
+
+ }else if(f.p_name.value==""){
+ alert("이름을 입력하세요");
+ f.p_name.focus();
+ return;
+
+ }else if(f.p_sex.value==""){
+ alert("성별을 체크하세요");
+ f.p_sex.focus();
+ return;
+
+}else if(f.p_birth_year.value=="" ){
+alert("생년월일을 체크하세요");
+f. p_birth_year.focus();
+return;
+
+}else if(f.p_birth_month.value=="" ){
+alert("생년월일을 체크하세요");
+f.p_birth_month.focus();
+return;
+
+}else if(f.p_birth_day.value=="" ){
+alert("생년월일을 체크하세요");
+f.addjoin.p_sex.focus();
+return;
+
+}else if (f.p_birth_age.value=="" ){
+alert("나이를 체크하세요");
+document.f.p_sex.focus();
+return;
+ }else if(f.p_agree.checked==false){
+   alert("개인정보 수집에 동의하세요");
+   document.f.p_agree.focus();
+   return;
+ }
+
+ f.submit();
+
+}
+</script>
+<style>
+body {
+  margin: 0;
+}
+#header {
+  width: 100%;
+  background-color: #ffffff;
+}
+#main-content {
+  width: 100%;
+}
+#header li {
+  display: inline-block;
+  margin-right: 30px;
+}
+img {
+  max-width: 100%;
+}
+.form-group {
+  margin-left: auto;
+  margin-right: auto;
+  width:20%
+}
+
+.container-fluid{
+  float: right;
+}
+.content {
+	float:center;
+	width: auto;
+	margin-top: 80px;
+	height: 400px;
+
+}
+#left{
+	float: left;
+	width: 400px;
+	margin-left: 20px;
+
+}
+.using-service{
+	border: 1px gray dashed;
+	height: 300px;
+}
+#right{
+	float: right;
+	width: 500px;
+
+	margin-right: 50px;
+}
+.new-alarm{
+	border: 1px gray dashed;
+	height: 300px;
+}
+.bottom-footer {
+	margin-top: 200px;
+
+}
+.contact_table button {
+	width: auto;
+background-color: #2d3e50;
+color: white;
+padding: 0 25px;
+font-size: 14px;
+text-transform: uppercase;
+font-weight: 700;
+margin: 0;
+margin-top: 30px;
+float: right;
+margin-right: 50px;
+}
+.contact_table{
+	margin-left: 250px;
+	margin-top: 100px;
+}
+#table_resume{
+  width: 800px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  margin-left: 50px;
+}
+#table_resume th{
+  background-color: #D5D5D5;
+  font-size: 15px;
+  color: black;
+  text-align: center;
+}
+#table_resume td{
+  padding: 10px;
+  text-align:left;
+}
+#p_basic_item_form {
+  margin-left: 200px;
+}
+#table_jobopening{
+  width: 800px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#table_jobopening th{
+  background-color: #D5D5D5;
+  font-size: 15px;
+  color: black;
+  text-align: center;
+}
+#table_jobopening td{
+  padding: 10px;
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+  <div class="top-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-6">
+          <div class="top-header-left">
+            <a href="p_sign_up.html">Sign Up</a>
+            <a href="loginpage.html">Log In</a>
+          </div> <!-- /.top-header-left -->
+        </div> <!-- /.col-md-6 -->
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </div> <!-- /.top-header -->
+  <div class="main-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-8">
+          <div class="logo">
+            <h1><a href="main.html">IT ARMY</a></h1>
+            <h5>Automatic Recruitment Matching for You</h5>
+          </div> <!-- /.logo -->
+        </div> <!-- /.col-md-4 -->
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </div> <!-- /.main-header -->
+  <div class="main-nav">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-7">
+          <div class="list-menu">
+            <ul>
+              <li><a href="main.html">채용정보</a></li>
+              <li><a href="search_j.html">상세검색</a></li>
+              <li><a href="mypage_j_matchingservice0.html">매칭서비스</a></li>
+              <li><a href="mypage_j.html">My Page</a></li>
+            </ul>
+          </div> <!-- /.list-menu -->
+        </div> <!-- /.col-md-6 -->
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </div> <!-- /.main-nav -->
+
+  <div>
+    <form id="p_basic_item_form"  >
+      <table id="table_jobopening" class="tablesorter" border="1" cellpadding="1" cellspacing="1" style="border:1px white solid;">
+        <thead>
+          <tr>
+            <th style="width:50px"><input type="radio" name="sign_up" onclick="location.href='p_sign_up.html'"   id="btn_personal" value="개인회원" checked=""><label for ="btn_personal">개인회원</label></th>
+            <th style="width:50px"><input type="radio" name="sign_up" onclick="location.href='c_sign_up.html'"   id="btn_company" value="기업회원"><label for ="btn_company">기업회원</label></th>
+          </tr>
+        </thead>
+    </table>
+      <div >
+        <fieldset>
+          <legend>기본정보</legend>
+
+						<table id="table_resume" class="tablesorter" border="1" cellpadding="0" cellspacing="1" style="border:1px white solid;">
+							<tbody>
+
+              <tr>
+								<th scope ="row" colspan ="2"><span class ="blank"></span> 아이디*</th>
+								<td>
+                    <input type="text" id="p_id" name="p_id">
+								</td>
+							</tr>
+
+							<tr>
+								<th scope="row" colspan="2"><span class="blank"></span> 비밀번호*</th>
+								<td >
+										<input type="password" id="p_password" name="p_password" >
+								</td>
+							</tr>
+
+							<tr>
+								<th scope="row" colspan="2"><span class="blank"></span> 비밀번호 확인*</th>
+								<td >
+										<input type="password" id="p_check_password" name="p_check_password">
+								</td>
+							</tr>
+
+						<tr>
+							<th scope ="row" colspan ="2"><span class ="blank"></span>이름*</th>
+							<td>
+								<input type="text" id="p_name" name="p_name" >
+							</td>
+						</tr>
+
+						<tr>
+							<th scope ="row" colspan ="2"><span class ="blank"></span>성별*</th>
+							<td>
+									<input type="radio" id="p_sex0" name="p_sex" value="0">
+									<label for="p_sex0">남</label>
+									<input type="radio" id="p_sex1" name="p_sex" value="1">
+									<label for="p_sex1">여</label>
+							</td>
+						</tr>
+
+
+							<tr>
+								<th scope="row" colspan="2"><span class="blank"></span>생년월일*</th>
+								<td>
+										<select title="출생연도 선택"  id="p_birth_year" name="p_birth_year" >
+											<option value=""selected="">출생연도</option>
+												<option value="2001">2001년</option>
+												<option value="2000">2000년</option>
+										</select>
+
+										<select title="월 선택" id="p_birth_month" name="p_birth_month" >
+											<option value=""selected="">월</option>
+												<option value="1">1월</option>
+												<option value="2">2월</option>
+												<option value="3">3월</option>
+												<option value="4">4월</option>
+												<option value="5">5월</option>
+												<option value="6">6월</option>
+												<option value="7">7월</option>
+												<option value="8">8월</option>
+												<option value="9">9월</option>
+												<option value="10">10월</option>
+												<option value="11" >11월</option>
+												<option value="12">12월</option>
+										</select>
+
+										<select title="일 선택" id="p_birth_day" name="p_birth_day" >
+											<option value=""selected="">일</option>
+												<option value="1">1일</option>
+												<option value="2">2일</option>
+										</select>
+
+										<select title="만 나이 선택" id="p_birth_age" name="p_birth_age" >
+											<option value=""selected="">나이</option>
+												<option value="1">만 17세</option>
+												<option value="2">만 18세</option>
+												<option value="34">만 50세</option>
+												<option value="35">만 51세</option>
+										</select>
+								</td>
+							</tr>
+
+							<tr>
+								<th scope ="row" colspan ="2"><span class ="blank"></span>휴대폰</th>
+								<td>
+											<select title="휴대폰 국번" id="p_phone1" name="p_phone1" >
+												<option value="">휴대폰 국번</option>
+												<option value="010">010</option>
+												<option value="011">011</option>
+												<option value="016">016</option>
+												<option value="017">017</option>
+												<option value="018">018</option>
+												<option value="019">019</option>
+											</select>
+											<!--셀렉트박스에서 선택-->
+											<span class="delimiter">-</span>
+											<input type="number" id="p_phone2" name="p_phone2" maxlength="4" > <span class="delimiter" >-</span> <input type="number" id="p_phone3" name="p_phone3" maxlength="4" >
+								</td>
+							</tr>
+
+							<tr>
+								<th scope ="row" colspan ="2"><span class ="blank"></span> 이메일</th>
+								<td>
+                  <form name="form" method="post">
+                  <input name="p_email1" type="text" class="box" id="p_email1" size="15"> @ <input name="p_email2" type="text" class="box" id="p_email2" size="20">
+                  <select name="p_email_select" class="box" id="p_email_select" onChange="checkemailaddy();">
+                  <option value=""selected="">선택하세요</option>
+                  <option value="naver.com" >naver.com</option>
+                  <option value="hanmail.net">hanmail.net</option>
+                  <option value="nate.com">nate.com</option>
+                  <option value="daum.net">daum.net</option>
+                  <option value="gmail.com">gmail.com</option>
+                  <option value="1">직접입력</option>
+                  </select>
+                  </form>
+								</td>
+							</tr>
+
+
+
+
+							<tr>
+								<th scope="row" colspan="2"><span class="blank"></span>주소</th>
+								<td>
+										 <input type="text" id="p_address" name="p_address" style="width:500px;">
+								</td>
+							</tr>
+
+
+
+
+						</tbody>
+          </table>
+        </div>
+      </fieldset>
+            <tr>
+              <th scope="row" colspan="2"><span class="blank"></span> </th>
+              <td >
+                  <label>
+                      <input id="p_agree" name="p_agree" type="checkbox" checked="">
+                      개인정보 수집에 동의합니다.
+                  </label>
+              </td>
+            </tr>
+            <p class="mbrBtnFunc">
+              <button type="button" id="btn_p_join" name="btn_p_join" onclick="checkfield()"><span>가입하기</span></button></span>
+            </p>
+          </div>
+          <div class="footer container" height = "15px">
+            <div class="bottom-footer">
+                   <div class="container">
+                       <div class="row">
+                           <div class="col-md-12 text-center">
+                               <span>Copyright &copy; 2084 <a href="#">Company Name</a></span>
+                               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, expedita soluta mollitia accusamus ut architecto maiores cum fugiat. Pariatur ipsum officiis fuga deleniti alias quia nostrum veritatis enim doloremque eligendi?</p>
+                           </div> <!-- /.col-md-12 -->
+                       </div> <!-- /.row -->
+                   </div> <!-- /.container -->
+               </div> <!-- /.bottom-footer -->
+             </div>
+
+
+
+</form>
+
+
+
+
+</body>
+</html>

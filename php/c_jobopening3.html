@@ -1,0 +1,1139 @@
+<!doctype html>
+
+<html lang="ko">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet">
+
+<link rel="stylesheet" href="bootstrap.css">
+<link rel="stylesheet" href="normalize.min.css">
+<link rel="stylesheet" href="font-awesome.min.css">
+<link rel="stylesheet" href="animate.css">
+<link rel="stylesheet" href="templatemo-misc.css">
+<link rel="stylesheet" href="templatemo-style.css">
+
+<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+<head>
+<style>
+body {
+	margin: 0;
+}
+#header {
+	width: 100%;
+	background-color: #ffffff;
+}
+#main-content {
+	width: 100%;
+}
+#header li {
+	display: inline-block;
+	margin-right: 30px;
+}
+img {
+	max-width: 100%;
+}
+.form-group {
+	margin-left: auto;
+	margin-right: auto;
+	width:20%
+}
+.list-group {
+	float:left;
+	background: #D5D5D5;
+	width:200px;
+}
+.container-fluid{
+	float: right;
+}
+.content {
+	float:center;
+	width: auto;
+	margin-top: 80px;
+	height: 400px;
+
+}
+#left{
+	float: left;
+	width: 400px;
+	margin-left: 20px;
+
+}
+.using-service{
+	border: 1px gray dashed;
+	height: 300px;
+}
+#right{
+	float: right;
+	width: 500px;
+
+	margin-right: 50px;
+}
+.new-alarm{
+	border: 1px gray dashed;
+	height: 300px;
+}
+.bottom-footer {
+	margin-top: 200px;
+
+}
+.contact_table button {
+	width: auto;
+background-color: #2d3e50;
+color: white;
+padding: 0 25px;
+font-size: 14px;
+text-transform: uppercase;
+font-weight: 700;
+margin: 0;
+margin-top: 30px;
+float: right;
+margin-right: 50px;
+}
+.contact_table{
+	margin-left: 250px;
+	margin-top: 100px;
+}
+#table_resume{
+	width: 800px;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	margin-left: 50px;
+}
+#table_resume th{
+	background-color: #D5D5D5;
+	font-size: 15px;
+	color: black;
+	text-align: center;
+}
+#table_resume td{
+	padding: 10px;
+	text-align:left;
+}
+#c_entry_item_form{
+	margin-left: 200px;
+
+}
+
+</style>
+<meta charset                                                               ="utf-8">
+<title>구인기업_항목입력 </title>
+<SCRIPT LANGUAGE="JavaScript">
+var fNum4 = 1;
+var fNum5 = 1;
+var fNum6 = 1;
+
+function checkfield(){
+
+	var f=document.forms[0];
+
+	if(f.c_resume_name.value==""){ //id값이 없을 경우
+		confirm("공고제목을 입력하세요");         //메세지 경고창을 띄운 후
+		f.c_resume_name.focus();     // id 텍스트박스에 커서를 위치
+		return;
+	}else if(f.c_employment_title.value==""){
+		confirm("채용제목을 입력하세요");
+		f.c_employment_title.focus();
+		return;
+	}else if(f.c_tasks.value==""){
+		confirm("직무를 입력하세요");
+		f.c_tasks.focus();
+		return;
+	}else if(f.c_functional_level.value==""){
+		alert("직능수준을 선택하세요");
+		f.c_functional_level.focus();
+		return;
+	}else if(f.c_min_wages.value==""){
+		alert("최소급여를 입력하세요.");
+		f.c_min_wages.focus();
+		return;
+	}else if(f.c_max_wages.value==""){
+		alert("최대급여를 입력하세요");
+		f.c_max_wages.focus();
+		return;
+	}else if(f.c_position.value==""){
+		alert("직급을 입력하세요");
+		f.c_position.focus();
+		return;
+	}else if(f.c_responsibility.value=="" ){
+		alert("직책을 입력하세요");
+		f.c_responsibility.focus();
+		return;
+	}else if(f.c_recruitment_volume.value=="" ){
+		alert("모집인원을 선택하세요");
+		f.c_recruitment_volume.focus();
+		return;
+	}else if (f.c_graduate_to_be.value=="" ){
+		alert("졸업예정자 여부를 선택하세요");
+		f.c_graduate_to_be.focus();
+		return;
+	}
+else if (f.c_major.value=="" ){
+		alert("전공을 선택하세요");
+		f.c_major.focus();
+		return;
+	}
+else if (f.c_sex.value=="" ){
+		alert("성별을 선택하세요");
+		f.c_sex.focus();
+		return;
+	}
+else if (f.c_age.value=="" ){
+		alert("연령을 선택하세요");
+		f.c_age.focus();
+		return;
+	}else if (f.c_reception_period_year1.value=="" ){
+		alert("접수기간 연도를 선택하세요");
+		f.c_reception_period_year1.focus();
+		return;
+	}else if (f.c_reception_period_month1.value=="" ){
+		alert("접수기간 월을 선택하세요");
+		f.c_reception_period_month1.focus();
+		return;
+	}else if (f.c_reception_period__day1.value=="" ){
+		alert("접수기간 일을 선택하세요");
+		f.c_reception_period__day1.focus();
+		return;
+	}else if (f.c_reception_period_year2.value=="" ){
+		alert("접수기간 연도를 선택하세요");
+		f.c_reception_period_year2.focus();
+		return;
+	}else if (f.c_reception_period_month2.value=="" ){
+		alert("접수기간 월을 선택하세요");
+		f.c_reception_period_month2.focus();
+		return;
+	}else if (f.c_reception_period__day2.value=="" ){
+		alert("접수기간 일을 선택하세요");
+		f.c_reception_period__day2.focus();
+		return;
+	}else if (f.c_reception_period_time.value=="" ){
+		alert("접수기간 시간을 선택하세요");
+		f.c_reception_period_time.focus();
+		return;
+	}else if(f.c_workplace.value==""){
+		confirm("근무지역을 선택하세요");
+		f.c_workplace.focus();
+		return;
+	}else if(f.c_workplace_spe.value==""){
+		confirm("근무지역 상세를 입력하세요");
+		f.c_workplace_spe.focus();
+		return;
+	}else if(f.c_day_duty.value==""){
+		alert("근무요일을 선택하세요");
+		f.c_day_duty.focus();
+		return;
+	}else if(f.c_employment_form.value==""){
+		alert("고용형태를 선택하세요.");
+		f.c_employment_form.focus();
+		return;
+	}else if(f.c_work_time.value==""){
+		alert("근무시간을 선택하세요");
+		f.c_work_time.focus();
+		return;
+	}else if(f.c_it_certificate.value==""){
+		alert("IT자격증을 입력하세요");
+		f.c_it_certificate.focus();
+		return;
+	}else if(f.c_use_language.value=="" ){
+		alert("사용언어 IDE를 입력하세요");
+		f.c_use_language.focus();
+		return;
+	}else if(f.c_subject_course.value=="" ){
+		alert("이수교과목을 입력하세요");
+		f.c_subject_course.focus();
+		return;
+	}else if(f.c_sw_development.value=="" ){
+		alert("SW분야를 입력하세요");
+		f.c_sw_development.focus();
+		return;
+	}
+
+	f.submit();
+
+}
+function myFunction() {
+	var x;
+	if (confirm("지원 하시겠습니까?") == true) {
+		x = "지원 되었습니다!";
+		confirm("지원 되었습니다!")
+	} else {
+		x = "취소 되었습니다!";
+	}
+	document.getElementById("demo").innerHTML = x;
+}
+function checkemailaddy(){
+	var v=document.forms[0];
+	if (v.c_w_email_select.value == '1') {
+		v.c_w_email2.readonly = false;
+		v.c_w_email2.value = '';
+		v.c_w_email2.focus();
+	}
+	else {
+		v.c_w_email2.readonly = true;
+		v.c_w_email2.value = v.c_w_email_select.value;
+	}
+}
+function MM_openBrWindow(theURL,winName,features) {
+	window.open(theURL,winName,features).focus();}
+
+	function getObj4()
+	{
+		var obj = event.srcElement
+		while (obj.tagName !='TD') //TD가 나올때까지의 Object추출
+		{
+			obj = obj.parentElement
+		}
+		return obj
+	}
+	function delRow4()
+	{
+		var idx = getObj4().parentElement.rowIndex;
+		var tRow = tb4.deleteRow(idx);
+	}
+	function inRowLast4()
+	{
+		if(fNum5 > 5000) { return false; } //5000개 까지만 추가를 허용하겠다는 설정입니다.
+		else {
+			if(document.getElementById){
+				var Tbl = document.getElementById('tb4');
+			}
+			else
+			{
+				var Tbl = document.all['tb4'];
+			}
+			var tRow = Tbl.insertRow();  //그냥 맨 아래에 추가하므로, 별다른 변수없습니다.
+			var uploadOBJ = "<TABLE>";
+			uploadOBJ +="<tr><th class=c_foreign_language_ability rowspan=\"3\" style=\"border-right:1px solid #e5e5e5;\"><span class=blank></span> 외국어능력</th>";
+			uploadOBJ +="<th scope=row>언어종류</th>";
+			uploadOBJ += "<td><select id=c_verbal_kind ><option value=\"0\">영어</option></select></td></tr>";
+			uploadOBJ += "<tr><th scope=row>공인시험</th>";
+			uploadOBJ += "<td><select id=c_approved_test ><option value =\"0\">토익</option></select></td></tr>";
+			uploadOBJ += "<tr><th scope=row>점수/급수</th><td><input type =text id=c_feed_grades >&nbsp;점&nbsp;</td></tr>";
+			uploadOBJ += "</table>";
+			uploadOBJ += "<a href=#; onclick='delRow4();'><input type=button value=' 삭제 '></a>";
+			tRow.insertCell(0).innerHTML = uploadOBJ;
+			fNum4++;
+		}
+	}
+
+	function getObj5()
+	{
+		var obj = event.srcElement
+		while (obj.tagName !='TD') //TD가 나올때까지의 Object추출
+		{
+			obj = obj.parentElement
+		}
+		return obj
+	}
+	function delRow5()
+	{
+		var idx = getObj5().parentElement.rowIndex;
+		var tRow = tb5.deleteRow(idx);
+	}
+	function inRowLast5()
+	{
+		if(fNum5 > 5000) { return false; } //5000개 까지만 추가를 허용하겠다는 설정입니다.
+		else {
+			if(document.getElementById){
+				var Tbl = document.getElementById('tb5');
+			}
+			else
+			{
+				var Tbl = document.all['tb5'];
+			}
+			var tRow = Tbl.insertRow();  //그냥 맨 아래에 추가하므로, 별다른 변수없습니다.
+			var uploadOBJ = "<TABLE id=dataTable  >";
+
+			uploadOBJ +="<tr><th class =c_career rowspan=\"3\" style=\"border-right:1px solid #e5e5e5;\">&nbsp;경력추가&nbsp;</th>";
+			uploadOBJ += "<th scope =row>기간</th><td><select title =기간 선택 id=c_career_min ><option value=\"\"selected=\"\">3년</option></select>이상";
+			uploadOBJ += "<select title=기간 선택 id=c_career_max ><option value=\"\"selected=\"\">10년</option></select>이하</td></tr>";
+			uploadOBJ +="<th scope=row>업종</th><td><input type=text  id='c_business_type"+fNum5+"'  ><button type=button class=btn_c_business_type onclick=\"javascript:MM_openBrWindow('c_business_type.php?c_business_type=c_business_type"+fNum5+"','pop', 'scrollbars=no,width=550,height=500')\">검색</button></td></tr>";
+			uploadOBJ +="<tr><th scope=row>직무</th><td><input type=text id='c_job_duty"+fNum5+"'><button type=button id=btn_c_job_duty onclick=\"javascript:MM_openBrWindow('c_job_duty.php?c_job_duty=c_job_duty"+fNum5+"','pop', 'scrollbars=no,width=550,height=500')\"><span>검색</span></button></td></tr>";
+			uploadOBJ += "</table>";
+			uploadOBJ += "<a href=#; onclick='delRow5();'><input type=button value=' 삭제 '></a>";
+			tRow.insertCell(0).innerHTML = uploadOBJ;
+			fNum5++;
+		}
+	}
+
+	function getObj6()
+	{
+		var obj = event.srcElement
+		while (obj.tagName !='TD') //TD가 나올때까지의 Object추출
+		{
+			obj = obj.parentElement
+		}
+		return obj
+	}
+	function delRow6()
+	{
+		var idx = getObj6().parentElement.rowIndex;
+		var tRow = tb6.deleteRow(idx);
+	}
+	function inRowLast6()
+	{
+		if(fNum5 > 5000) { return false; } //5000개 까지만 추가를 허용하겠다는 설정입니다.
+		else {
+			if(document.getElementById){
+				var Tbl = document.getElementById('tb6');
+			}
+			else
+			{
+				var Tbl = document.all['tb6'];
+			}
+			var tRow = Tbl.insertRow();  //그냥 맨 아래에 추가하므로, 별다른 변수없습니다.
+			var uploadOBJ = "<TABLE id=dataTable  >";
+
+			uploadOBJ +="<tr><th class =c_it_language_use rowspan=\"2\" style=\"border-right:1px solid #e5e5e5;\">&nbsp;사용언어/IDE 추가("+fNum6+")&nbsp;</th>";
+			uploadOBJ +="<th scope=row>사용언어/IDE</th><td><input type=text  id='c_it_language_use1"+fNum6+"'  ><button type=button class=btn_c_it_language_use onclick=\"javascript:MM_openBrWindow('c_it_language_use1.php?c_it_language_use1=c_it_language_use1"+fNum6+"','pop', 'scrollbars=no,width=550,height=500')\">검색</button></td></tr>";
+			uploadOBJ += "<tr><th scope =row>기간</th><td><select title =연도 선택 id=c_it_period ><option value=\"\"selected=\"\">3년</option></select>이상</td></tr>";
+			uploadOBJ += "</table>";
+			uploadOBJ += "<a href=#; onclick='delRow6();'><input type=button value=' 삭제 '></a>";
+			tRow.insertCell(0).innerHTML = uploadOBJ;
+			fNum6++;
+		}
+	}
+	</script>
+</head>
+
+<body>
+	<div class="top-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-6">
+          <div class="top-header-left">
+            <a href="c_sign_up.html">Sign Up</a>
+            <a href="loginpage.html">Log In</a>
+          </div> <!-- /.top-header-left -->
+        </div> <!-- /.col-md-6 -->
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </div> <!-- /.top-header -->
+  <div class="main-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-8">
+          <div class="logo">
+            <h1><a href="main_c.html">IT ARMY</a></h1>
+            <h5>Automatic Recruitment Matching for You</h5>
+          </div> <!-- /.logo -->
+        </div> <!-- /.col-md-4 -->
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </div> <!-- /.main-header -->
+  <div class="main-nav">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-7">
+          <div class="list-menu">
+            <ul>
+              <li><a href="main_c.html">인재정보</a></li>
+              <li><a href="search_c.html">상세검색</a></li>
+              <li><a href="mypage_c_matchingservice.html">매칭서비스</a></li>
+              <li><a href="mypage_c.html">My Page</a></li>
+            </ul>
+          </div> <!-- /.list-menu -->
+        </div> <!-- /.col-md-6 -->
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </div> <!-- /.main-nav -->
+
+
+	<div>
+		<div align="right">
+			<button type="button" id="btn_c_cominfo" name="btn_c_cominfo"><a href="mypage_j_companyinfo.html">기업정보</a></button>
+			<button type="button" id="btn_c_support" name="btn_c_support" onclick="myFunction()"><span>지원하기</span></button>
+		</div>
+
+		<form id="c_entry_item_form"  >
+
+			<div >
+				<fieldset>
+
+					<legend>채용정보</legend>
+
+					<div>
+						<div id                                                         ="c_rsPhotoBox" name="c_rsPhotoBox">
+							<p class                                                    ="c_rsPhoto">
+								<span class                                               ="c_profile"><img src="https://fileco.\9\7\JK_GG_wodbdpswpf.jpg&amp;2016-08-03 오후 9:29:32" alt="신재경" height="130" width="100"></span> <a href="http://www./Text_User/Photo_Edit/m_photo.asp" onclick="javascript:OpenWindow_Photoup('/Text_User/Photo_Edit/m_photo.asp','590','950');return false;"><img src="/img/text_user/resume/btn_photo_reg.gif" alt="사진등록/수정"></a>
+								<a href                                                   ="http://www./Text_User/Photo_Upload/M_Photo_Del.asp" onclick="javascript:Photo_Del();return false;"><img src="/img/text_user/resume/btn_photo_del.gif" alt="등록된 사진 삭제"></a>
+							</p>
+						</div>
+						<table id="table_resume" class="tablesorter" border="1" cellpadding="0" cellspacing="1" style="border:1px white solid;">
+							<tbody>
+
+
+								<tr>
+									<th scope                   ="row" colspan="2"><span class="blank"></span> 공고제목* </th>
+									<td>
+										<input type               ="text" id="c_resume_name" name="c_resume_name" style="width:500px;">
+									</td>
+								</tr>
+								<tr>
+									<th scope                                                 ="row" colspan="2"><span class="blank"></span> 채용제목*</th>
+									<td>
+										<input type                                          ="text" id="c_employment_title" name="c_employment_title" style="width:500px;" >
+									</td>
+								</tr>
+
+								<tr>
+									<th class                                                 ="c_occupation_type" rowspan="2" style="border-right:1px solid #e5e5e5;"><span class="blank"></span> 채용직종 </th>
+									<th scope                                                 ="row">직무*</th>
+									<td>
+										<input type                                           ="text" id="c_tasks" name="c_tasks" maxlength="100"><button type="button" id="btn_c_tasks" onclick="javascript:MM_openBrWindow('c_tasks.html','pop', 'scrollbars=no,width=550,height=500')"><span>검색</span></button>
+									</td>
+								</tr>
+
+								<tr>
+									<th scope                                                 ="row">직능수준*</th>
+									<td>
+										<select title                                           ="직능수준"  id="c_functional_level" name="c_functional_level" >
+											<option value                                         ="">직능수준</option>
+											<option value                                         ="1">1</option>
+											<option value                                         ="2">2</option>
+											<option value                                         ="3">3</option>
+											<option value                                         ="4">4</option>
+											<option value                                         ="5">5</option>
+											<option value                                         ="6">6</option>
+											<option value                                         ="7">7</option>
+										</select>
+									</td>
+								</tr>
+
+								<tr>
+									<th class                                                 ="c_salary_requirements" rowspan="3" style="border-right:1px solid #e5e5e5;"><span class="blank"></span> 급여조건</th>
+									<th scope                                                 ="row">최소급여*</th>
+									<td>
+										<input type                                           ="number" id="c_min_wages" name="c_min_wages" >&nbsp;만원&nbsp;
+									</td>
+								</tr>
+
+
+								<tr>
+									<th scope                                                 ="row">최대급여*</th>
+									<td>
+										<input type                                           ="number" id="c_max_wages" name="c_max_wages" >&nbsp;만원&nbsp;
+									</td>
+								</tr>
+
+								<tr>
+									<th scope                                                 ="row">기타여부</th>
+									<td>
+										<input type                                             ="checkbox" class="c_wages_etc" id="c_wages_etc1" name="c_wages_etc1" value="1" checked=""> <label for="c_wages_etc1">회사내규에 따름</label>
+										<input type                                             ="checkbox" class="c_wages_etc" id="c_wages_etc2" name="c_wages_etc2" value="1"> <label for="c_wages_etc2">면접 후 결정</label>
+									</td>
+								</tr>
+
+								<tr>
+									<th class                                                 ="c_staff_level_posts" rowspan="2" style="border-right:1px solid #e5e5e5;"><span class="blank"></span>직급/직책</th>
+									<th scope                                                 ="row">직급*</th>
+									<td>
+										<input type                                           ="text" id="c_position" name="c_position" ><button type="button" id="btn_c_position" onclick="javascript:MM_openBrWindow('c_position.html','pop', 'scrollbars=no,width=550,height=500')"><span>검색</span></button>
+									</td>
+								</tr>
+
+								<tr>
+									<th scope                                                 ="row">직책*</th>
+									<td>
+										<input type                                           ="text" id="c_responsibility" name="c_responsibility" ><button type="button" id="btn_c_responsibility" onclick="javascript:MM_openBrWindow('c_responsibility.html','pop', 'scrollbars=no,width=550,height=500')"><span>검색</span></button>
+									</td>
+								</tr>
+
+								<tr>
+									<th class                                                 ="c_employment_form" rowspan="2" style="border-right:1px solid #e5e5e5;"><span class="blank"></span>고용형태</th>
+									<th scope                                                 ="row">고용형태*</th>
+									<td>
+										<input type                                             ="checkbox" class="c_employment_forms" id="c_employment_forms1" name="c_employment_forms1" value="1" checked=""> <label for="c_employment_forms1">계약직</label>
+										<input type                                             ="checkbox" class="c_employment_forms" id="c_employment_forms2" name="c_employment_forms2" value="1" > <label for="c_employment_forms2">정규직</label>
+										<input type                                             ="checkbox" class="c_employment_forms" id="c_employment_forms3" name="c_employment_forms3" value="1" checked=""> <label for="c_employment_forms3">프리랜서</label>
+										<input type                                             ="checkbox" class="c_employment_forms" id="c_employment_forms4" name="c_employment_forms4" value="1" > <label for="c_employment_forms4">인턴</label>
+									</td>
+								</tr>
+
+								<tr>
+									<th scope                                                 ="row">모집인원</th>
+									<td>
+										<input type                                             ="radio" id="c_recruitment_volume0" name="c_recruitment_volume" value="0">
+										<input type                                             ="number"  id="c_recruitment_volume_text"  >
+										<label for                                              ="ln">명</label>
+										<input type                                             ="radio" id="c_recruitment_volume1" name="c_recruitment_volume" value="1" >
+										<label for                                              ="lbn">0명</label>
+										<input type                                             ="radio" id="c_recruitment_volume2" name="c_recruitment_volume" value="2">
+										<label for                                              ="lbmn">00명</label>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</fieldset>
+			</div>
+
+
+
+
+			<div>
+				<fieldset>
+					<legend>지원자격</legend>
+
+					<div>
+						<table id="table_resume" class="tablesorter" border="1" cellpadding="0" cellspacing="1" style="border:1px white solid;">
+							<tbody>
+
+								<tr>
+									<th scope                                               ="row" colspan="2"><span class="blank">경력사항*</th>
+										<td >
+											<input type                                           ="checkbox"  id="c_resume1" value="1" name="c_resume1" checked=""> <label for="c_resume1">무관</label>
+											<input type                                           ="checkbox"  id="c_resume2" value="1" name="c_resume2"> <label for="c_resume2">신입</label>
+											<input type                                           ="checkbox"  id="c_resume3" value="1" name="c_resume3"> <label for="c_resume3">경력</label>
+										</td>
+									</tr>
+
+									<tr>
+										<th class                                               ="c_highest_level" rowspan="3" style="border-right:1px solid #e5e5e5;"><span class="blank"></span>최종학력</th>
+										<th scope                                               ="row">학력*</th>
+										<td>
+											<select title   ="학력선택" id   ="c_academic ability" name="c_academic ability" >
+												<option value                                       ="">학력선택</option>
+												<option value                                       ="1">초등학교</option>
+												<option value                                       ="2">중학교</option>
+												<option value                                       ="3">고등학교</option>
+												<option value                                       ="4">대학(2,3년)</option>
+												<option value                                       ="5">대학교(4년)</option>
+												<option value                                       ="6">대학원</option>
+											</select>&nbsp;이상&nbsp;
+										</td>
+									</tr>
+
+
+
+									<tr>
+										<th scope                                                 ="row">졸업예정자 여부*</th>
+										<td>
+											<input type                                             ="radio" id="c_graduate_to_be0" name="c_graduate_to_be" value="0">
+											<label for                                              ="c_graduate_to_be0">포함</label>
+											<input type                                             ="radio" id="c_graduate_to_be1" name="c_graduate_to_be" value="1" checked="">
+											<label for                                              ="c_graduate_to_be1">미포함</label>
+										</td>
+									</tr>
+
+									<tr>
+										<th scope                                                 ="row">전공*</th>
+										<td>
+											<select title                       ="전공 선택"  id="c_major" name="c_major">
+												<option value                     ="1"selected="">전공</option>
+											</select>
+										</td>
+									</tr>
+
+									<tr>
+										<th class                                                 ="c_sex_and_age" rowspan="2" style="border-right:1px solid #e5e5e5;"><span class="blank"></span>성별/연령</th>
+										<th scope                                                 ="row">성별*</th>
+										<td>
+											<input type                                             ="radio" id="c_sex0" name="c_sex" value="0">
+											<label for                                              ="c_sex0">남자</label>
+											<input type                                             ="radio" id="c_sex1" name="c_sex" value="1" checked="">
+											<label for                                              ="c_sex1">여자</label>
+											<input type                                             ="radio" id="c_sex2" name="c_sex" value="2">
+											<label for                                              ="c_sex2">무관</label>
+										</td>
+									</tr>
+
+
+
+									<tr>
+										<th scope                                                   ="row">연령*</th>
+										<td>
+											<input type                                               ="radio" id="c_age1" name="c_age" value="0">
+											<select id                                                ="c_over_age" >
+												<option value                                           ="0">22세</option>
+											</select>&nbsp;이상&nbsp;
+											<select id                                                ="c_under_age" >
+												<option value                                           ="0">45세</option>
+											</select>&nbsp;이하&nbsp;
+
+											<input type                                               ="radio" id="c_age2" name="c_age" value="1" checked="">
+											<label for                                                ="c_age2">무관</label>
+										</td>
+									</tr>
+
+									<tr>
+										<th class                                                   ="c_sweetener" rowspan="5" style="border-right:1px solid #e5e5e5;"><span class="blank"></span> 우대조건 </th>
+										<th scope                                                   ="row">취업보호장려</th>
+										<td>
+											<input type                                             ="text" id="c_employment_promotion" name="c_employment_promotion" ><button type="button" class="btn_c_employment_promotion" onclick="javascript:MM_openBrWindow('c_employment_promotion.html','pop', 'scrollbars=no,width=550,height=500')"><span>검색</span></button>
+										</td>
+									</tr>
+
+									<tr>
+										<th scope                                                   ="row">자격능력</th>
+										<td>
+											<input type                                             ="text" id="c_requirements" name="c_requirements" ><button type="button" id="btn_c_requirements" onclick="javascript:MM_openBrWindow('c_requirements.html','pop', 'scrollbars=no,width=550,height=500')"><span>검색</span></button>
+										</td>
+									</tr>
+
+									<tr>
+										<th scope                                                   ="row">활동경험</th>
+										<td>
+											<input type                                             ="text" id="c_career_experience" name="c_career_experience" ><button type="button" id="btn_c_career_experience" onclick="javascript:MM_openBrWindow('c_career_experience.html','pop', 'scrollbars=no,width=550,height=500')"><span>검색</span></button>
+										</td>
+									</tr>
+
+									<tr>
+										<th scope                                                   ="row">근무조건</th>
+										<td>
+											<input type                                             ="text" id="c_working_conditions" name="c_working_conditions" ><button type="button" id="btn_c_working_conditions" onclick="javascript:MM_openBrWindow('c_working_conditions.html','pop', 'scrollbars=no,width=550,height=500')"><span>검색</span></button>
+										</td>
+									</tr>
+
+									<tr>
+										<th scope                                                   ="row">외국어능력</th>
+										<td>
+											<input type                                             ="text" id="c_foreign_language_ability"  name="c_foreign_language_ability" ><button type="button" id="btn_c_foreign_language_ability" onclick="javascript:MM_openBrWindow('c_foreign_language_ability.html','pop', 'scrollbars=no,width=550,height=500')"><span>검색</span></button>
+										</td>
+									</tr>
+
+									<tr>
+										<th class                                       ="c_qualification_etc" rowspan="1" style="border-right:1px solid #e5e5e5;"><span class="blank"></span>기타</th>
+										<th scope                                       ="row">일반자격증</th>
+										<td>
+											<input type                                 ="text" id="c_general_qualification" name="c_general_qualification" ><button type="button" id="btn_c_general_qualification" onclick="javascript:MM_openBrWindow('c_general_qualification.html','pop', 'scrollbars=no,width=550,height=500')"><span>검색</span></button>
+										</td>
+									</tr>
+
+									<tr>
+										<th scope ="row"  class="c_foreign_language_ability"><span class="blank"></span>외국어능력</th>
+										<td >
+											<button type="button" class="btn_c_foreign_language_ability" onclick='inRowLast4();'><span>추가</span></button>
+										</td>
+										<table id="tb4">
+										</table>
+									</tr>
+
+
+
+
+								</tbody>
+							</table>
+						</div>
+					</fieldset>
+				</div>
+
+
+
+				<div >
+					<fieldset>
+						<legend>접수기간</legend>
+
+						<div>
+							<table id="table_resume" class="tablesorter" border="1" cellpadding="0" cellspacing="1" style="border:1px white solid;">
+								<tbody>
+									<tr>
+										<th scope                               ="row" colspan="2"><span class="blank"></span>접수기간*</th>
+										<td>
+											<div>
+
+
+												<select title                       ="접수기간 선택"  id="c_reception_period_year1" name="c_reception_period_year1">
+													<option value                     =""selected="">연도</option>
+													<option value                   ="2001">2001년</option>
+													<option value                   ="2000">2000년</option>
+
+												</select>
+												<select title                       ="월 선택" id="c_reception_period_month1" name="c_reception_period__month1" >
+													<option value                     =""selected="">월</option>
+													<option value                   ="1">1월</option>
+													<option value                   ="2">2월</option>
+													<option value                   ="3">3월</option>
+													<option value                   ="4">4월</option>
+													<option value                   ="5">5월</option>
+													<option value                   ="6">6월</option>
+													<option value                   ="7">7월</option>
+													<option value                   ="8">8월</option>
+													<option value                   ="9">9월</option>
+													<option value                   ="10">10월</option>
+													<option value                   ="11" >11월</option>
+													<option value                   ="12">12월</option>
+												</select>
+
+												<select title                       ="일 선택"  id="c_reception_period__day1" name="c_reception_period__day1"  >
+													<option value                     =""selected="">일</option>
+													<option value                   ="1">1일</option>
+													<option value                   ="2">2일</option>
+												</select>~
+												<select title                       ="접수기간 선택"  id="c_reception_period_year2" name="c_reception_period_year2">
+													<option value                     =""selected="">연도</option>
+													<option value                   ="2001">2001년</option>
+													<option value                   ="2000">2000년</option>
+
+												</select>
+												<select title                       ="월 선택" id="c_reception_period_month2" name="c_reception_period__month2" >
+													<option value                     =""selected="">월</option>
+													<option value                   ="1">1월</option>
+													<option value                   ="2">2월</option>
+													<option value                   ="3">3월</option>
+													<option value                   ="4">4월</option>
+													<option value                   ="5">5월</option>
+													<option value                   ="6">6월</option>
+													<option value                   ="7">7월</option>
+													<option value                   ="8">8월</option>
+													<option value                   ="9">9월</option>
+													<option value                   ="10">10월</option>
+													<option value                   ="11" >11월</option>
+													<option value                   ="12">12월</option>
+												</select>
+
+												<select title                       ="일 선택"  id="c_reception_period__day2" name="c_reception_period__day2"  >
+													<option value                     =""selected="">일</option>
+													<option value                   ="1">1일</option>
+													<option value                   ="2">2일</option>
+												</select>
+												<select title                               ="시간선택" id="c_reception_period_time" name="c_reception_period_time" >
+													<option value                             ="0">17 시</option>
+													<option value                             ="1">18 시</option>
+												</select>&nbsp;까지&nbsp;
+											</div>
+											<div>
+												<input type                                 ="checkbox" id="c_reception_period_option1" name="c_reception_period_option1" value="1" checked=""> <label for="c_reception_period_option1">상시채용</label>
+												<input type                                 ="checkbox"  id="c_reception_period_option2" name="c_reception_period_option2" value="2" > <label for="c_reception_period_option2">채용시 마감</label>
+											</div>
+										</td>
+									</tr>
+
+
+								</tbody>
+							</table>
+						</div>
+					</fieldset>
+				</div>
+
+
+
+
+				<div>
+					<fieldset>
+						<legend>담당자 정보</legend>
+
+						<div>
+							<table id="table_resume" class="tablesorter" border="1" cellpadding="0" cellspacing="1" style="border:1px white solid;">
+								<tbody>
+									<tr>
+										<th class                       ="c_charge_person_information1" rowspan="6" style="border-right:1px solid #e5e5e5;"><span class="blank"></span>담당자 정보</th>
+										<th scope                       ="row">담당자명</th>
+										<td>
+											<input type                 ="text" id="c_charge_person_name" name="c_charge_person_name" >
+										</td>
+									</tr>
+
+									<tr>
+										<th scope                       ="row">부서명</th>
+										<td>
+											<input type                 ="text" id="c_partname" name="c_partname" >
+										</td>
+									</tr>
+
+									<tr>
+										<th scope                       ="row">전화번호</th>
+										<td>
+											<select title               ="국번" id="c_charge_num1" name="c_charge_num1"  style="width:110px;float:left;">
+												<option value             ="">031</option>
+											</select>
+											<!--셀렉트박스에서 선택-->
+											<span class                 ="delimiter">-</span>
+											<input type                 ="number"  id="c_charge_num2" name="c_charge_num2"  maxlength="4" > <span class="delimiter" >-</span> <input type="number"id="c_charge_num3" name="c_charge_num3" maxlength="4" >
+										</td>
+									</tr>
+
+
+									<tr>
+										<th scope                       ="row">휴대폰</th>
+										<td>
+											<select title               ="휴대폰 국번"  id="c_charge_phone1" name="c_charge_phone1" style="width:110px;float:left;" >
+												<option value             ="">휴대폰 국번</option>
+												<option value             ="010">010</option>
+												<option value             ="011">011</option>
+												<option value             ="016">016</option>
+												<option value             ="017">017</option>
+												<option value             ="018">018</option>
+												<option value             ="019">019</option>
+											</select>
+											<!--셀렉트박스에서 선택-->
+											<span class                 ="delimiter">-</span>
+											<input type                 ="number"  id="c_charge_phone2" name="c_charge_phone2"  maxlength="4"  > <span class="delimiter">-</span> <input type="number" id="c_charge_phone3" name="c_charge_phone3"  maxlength="4" >
+										</td>
+									</tr>
+
+									<tr>
+										<th scope                       ="row">이메일</th>
+										<td>
+											<form name="form" method="post">
+												<input name="c_w_email1" type="text" class="box" id="c_w_email1" name="c_w_email1"  size="15"> @ <input name="c_w_email2" type="text" class="box" id="c_w_email2" name="c_w_email2" size="20">
+												<select name="c_w_email_select" class="box" id="c_w_email_select" name="c_w_email_select" onChange="checkemailaddy();">
+													<option value=""selected="">선택하세요</option>
+													<option value="naver.com" >naver.com</option>
+													<option value="hanmail.net">hanmail.net</option>
+													<option value="nate.com">nate.com</option>
+													<option value="daum.net">daum.net</option>
+													<option value="gmail.com">gmail.com</option>
+													<option value="1">직접입력</option>
+												</select>
+											</form>
+										</td>
+									</tr>
+
+									<tr>
+										<th scope                       ="row">공개여부</th>
+										<td>
+											<input type                   ="radio" id="c_charge_open0" name="c_charge_open" value="0">
+											<label for                    ="c_charge_open0">예</label>
+											<input type                   ="radio" id="c_charge_open1" name="c_charge_open" value="1" checked="">
+											<label for                    ="c_charge_open1">아니요</label>
+										</td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+					</fieldset>
+				</div>
+
+				<div >
+					<fieldset>
+						<legend>포트폴리오/사전인터뷰</legend>
+
+						<div>
+							<table id="table_resume" class="tablesorter" border="1" cellpadding="0" cellspacing="1" style="border:1px white solid;">
+								<tbody>
+									<tr>
+										<th scope                       ="row" colspan ="2"><span class ="blank"></span>포트폴리오첨부 희망여부</th>
+										<td>
+											<input type                 ="radio" id="c_portfolio0" name="c_portfolio" value="0">
+											<label for                  ="c_portfolio0">예</label>
+											<input type                 ="radio" id="c_portfolio1" name="c_portfolio" value="1" checked="">
+											<label for                  ="c_portfolio1">아니오</label>
+										</td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+					</fieldset>
+				</div>
+
+
+				<div >
+					<fieldset>
+						<legend>근무환경</legend>
+
+						<div>
+							<table id="table_resume" class="tablesorter" border="1" cellpadding="0" cellspacing="1" style="border:1px white solid;">
+								<tbody>
+									<tr>
+										<th scope                       ="row" colspan="2"><span class="blank"></span>근무지역*</th>
+										<td>
+											<select title                 ="근무지"id="c_workplace" name="c_workplace"  >
+												<option value               ="0">서울</option>
+											</select>
+											<select title                 ="근무지상세" id="c_workplace_spe" name="c_workplace_spe" >
+												<option value               ="0">서울 전체</option>
+											</select>
+											<input type                 ="checkbox"  id="c_workplace_opt" name="c_workplace_opt" value="1" > <label for="c_workplace_opt">재택근무가능</label>
+										</td>
+									</tr>
+
+									<tr>
+										<th scope                       ="row" colspan ="2"><span class ="blank"></span>근무요일*</th>
+										<td>
+											<input type                 ="radio" id="c_day_duty0" name="c_day_duty" value="0">
+											<label for                  ="c_day_duty0">주5일</label>
+											<input type                 ="radio" id="c_day_duty1" name="c_day_duty" value="1" checked="">
+											<label for                  ="c_day_duty1">주6일</label>
+											<input type                 ="radio" id="c_day_duty2" name="c_day_duty" value="2">
+											<label for                  ="c_day_duty2">격주휴무</label>
+											<input type                 ="radio" id="c_day_duty3" name="c_day_duty" value="3">
+											<label for                  ="c_day_duty3">격일휴무</label>
+											<input type                 ="radio" id="c_day_duty4" name="c_day_duty" value="4">
+											<label for                  ="c_day_duty4">협의가능</label>
+										</td>
+									</tr>
+
+									<tr>
+										<th scope                       ="row" colspan ="2"><span class ="blank"></span>고용형태*</th>
+										<td>
+											<input type                 ="radio" id="c_employment_form0" name="c_employment_form" value="0">
+											<label for                  ="c_employment_form0">정규직</label>
+											<input type                 ="radio" id="c_employment_form1" name="c_employment_form" value="1" checked="">
+											<label for                  ="c_employment_form1">계약직</label>
+										</td>
+									</tr>
+
+									<tr>
+										<th scope                       ="row" colspan ="2"><span class ="blank"></span>근무시간*</th>
+										<td>
+											<div>
+												<input type                 ="radio" id="c_work_time0" name="c_work_time" value="0">
+												<label for                  ="c_work_time0">전일제</label>
+												<input type                 ="radio" id="c_work_time1" name="c_work_time" value="1" checked="">
+												<label for                  ="c_work_time1">시간제</label>
+												<input type                 ="radio" id="c_work_time2" name="c_work_time" value="2">
+												<label for                  ="c_work_time2">협의가능</label>
+											</div>
+											<div >
+												<select title                       ="시간 선택"  id="c_work_time_hour1" name="c_work_time_hour1">
+													<option value                     =""selected="">시간</option>
+												</select>시
+												<select title                       ="분 선택" id="c_work_time_min1" name="c_work_time_min1" >
+													<option value                     =""selected="">분</option>
+												</select>분
+												~
+												<select title                       ="시간 선택"  id="c_work_time_hour1" name="c_work_time_hour1">
+													<option value                     =""selected="">시간</option>
+												</select>시
+												<select title                       ="분 선택" id="c_work_time_min1" name="c_work_time_min1" >
+													<option value                     =""selected="">분</option>
+												</select>분
+												<input type                   ="checkbox"  id="c_work_time_opt" name="c_work_time_opt" value="1"> <label for="c_work_time_opt">탄력근무제</label>
+											</div>
+										</td>
+									</tr>
+
+									<tr>
+										<th class                                                   ="c_welfare" rowspan="6" style="border-right:1px solid #e5e5e5;"><span class="blank"></span> 복리후생 </th>
+										<th scope                                                   ="row">연금.보험</th>
+										<td>
+											<input type                                             ="text"  id="c_annuity_insurance" name="c_annuity_insurance" ><button type="button" id="btn_c_annuity_insurance" onclick="javascript:MM_openBrWindow('c_annuity_insurance.html','pop', 'scrollbars=no,width=550,height=500')"><span>검색</span></button>
+										</td>
+									</tr>
+
+									<tr>
+										<th scope                                                   ="row">휴무.휴가</th>
+										<td>
+											<input type                                             ="text" id="c_holiday_vacation" name="c_holiday_vacation" ><button type="button" id="btn_c_holiday_vacation" onclick="javascript:MM_openBrWindow('c_holiday_vacation.html','pop', 'scrollbars=no,width=550,height=500')"><span>검색</span></button>
+										</td>
+									</tr>
+
+									<tr>
+										<th scope                                                   ="row">보상.수당</th>
+										<td>
+											<input type                                             ="text" id="c_compensation_benefits" name="c_compensation_benefits"  ><button type="button" id="btn_c_compensation_benefits" onclick="javascript:MM_openBrWindow('c_compensation_benefits.html','pop', 'scrollbars=no,width=550,height=500')"><span>검색</span></button>
+										</td>
+									</tr>
+
+									<tr>
+										<th scope                                                   ="row">사내시설.장애인</th>
+										<td>
+											<input type                                             ="text"  id="c_inhouse_facility" name="c_inhouse_facility" ><button type="button" id="btn_c_inhouse_facility" onclick="javascript:MM_openBrWindow('c_inhouse_facility.html','pop', 'scrollbars=no,width=550,height=500')"><span>검색</span></button>
+										</td>
+									</tr>
+
+									<tr>
+										<th scope                                                   ="row">생활.편의</th>
+										<td>
+											<input type                                             ="text"  id="c_living_convenience" name="c_living_convenience" ><button type="button" id="btn_c_living_convenience" onclick="javascript:MM_openBrWindow('c_living_convenience.html','pop', 'scrollbars=no,width=550,height=500')"><span>검색</span></button>
+										</td>
+									</tr>
+
+									<tr>
+										<th scope                                                   ="row">교육.연수</th>
+										<td>
+											<input type                                             ="text"  id="c_education_study" name="c_education_study" ><button type="button" id="btn_c_education_study" onclick="javascript:MM_openBrWindow('c_education_study.html','pop', 'scrollbars=no,width=550,height=500')"><span>검색</span></button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</fieldset>
+
+					<div >
+						<fieldset>
+							<legend>IT 우대조건</legend>
+
+							<div >
+								<table id="table_resume" class="tablesorter" border="1" cellpadding="0" cellspacing="1" style="border:1px white solid;">
+									<tbody>
+
+										<tr>
+											<th scope                       ="row" colspan="2"><span class="blank"></span>IT 자격증* </th>
+											<td >
+												<input type                 ="text" id="c_it_certificate" name="c_it_certificate" ><button type="button" id="btn_c_it_certificate" onclick="javascript:MM_openBrWindow('c_it_certificate.html','pop', 'scrollbars=no,width=550,height=500')"><span>검색</span></button>
+											</td>
+										</tr>
+
+										<tr>
+											<th scope                       ="row" colspan="2"><span class="blank"> 사용언어/IDE* </th>
+												<td>
+													<input type                 ="text" id="c_use_language" name="c_use_language" ><button type="button" id="btn_c_use_language" onclick="javascript:MM_openBrWindow('c_use_language.html','pop', 'scrollbars=no,width=550,height=500')"><span>검색</span></button>
+												</td>
+											</tr>
+
+											<tr>
+												<th scope                       ="row" colspan="2"><span class="blank"> 이수교과목* </th>
+													<td >
+														<input type                 ="text" id="c_subject_course" name="c_subject_course" ><button type="button" id="btn_c_subject_course" onclick="javascript:MM_openBrWindow('c_subject_course.html','pop', 'scrollbars=no,width=550,height=500')"><span>검색</span></button>
+													</td>
+												</tr>
+
+												<tr>
+													<th class         ="c_development" rowspan="2" style="border-right:1px solid #e5e5e5;"><span class="blank"></span> 개발분야 및 그외</th>
+													<th scope         ="row">SW분야*</th>
+													<td>
+														<input type   ="text" id="c_sw_development" name="c_sw_development"  ><button type="button" id="btn_c_sw_development" onclick="javascript:MM_openBrWindow('c_sw_development.html','pop', 'scrollbars=no,width=550,height=500')"><span>검색</span></button>
+													</td>
+												</tr>
+
+												<tr>
+													<th scope         ="row">그 외정보</th>
+													<td>
+														<input type   ="text" id="c_development_etc" name="c_development_etc" >
+													</td>
+												</tr>
+
+												<tr>
+													<th scope  ="row"class="c_career"  ><span class="blank"></span> 경력 </th>
+													<td >
+														<button type="button" class="btn_c_career" onclick='inRowLast5();'><span>추가</span></button>
+													</td>
+													<table id="tb5">
+													</table>
+												</tr>
+												<table id="table_resume" class="tablesorter" border="1" cellpadding="0" cellspacing="0" style="border:1px white solid;">
+													<tbody>
+														<tr>
+															<th scope ="row" class ="c_it_language_use"  ><span class="blank"></span><strong>사용언어/IDE</strong></th>
+															<td >
+																<button type="button" class="btn_add_c_it_language_use" onclick='inRowLast6();'><span>추가</span></button>
+															</td>
+															<table id="tb6">
+															</table>
+														</tr>
+													</tbody>
+												</table>
+											</tbody>
+										</table>
+									</div>
+								</fieldset>
+							</div>
+						</div>
+						<p class                                    ="c_save">
+							<button type                              ="button" id="btn_c_save" name="btn_c_save" onclick="checkfield()"><span>저장</span></button>
+						</p>
+
+					</form>
+				</div>
+				<div class="footer container" height = "15px">
+		      <div class="bottom-footer">
+		             <div class="container">
+		                 <div class="row">
+		                     <div class="col-md-12 text-center">
+		                         <span>Copyright &copy; 2084 <a href="#">Company Name</a></span>
+		                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, expedita soluta mollitia accusamus ut architecto maiores cum fugiat. Pariatur ipsum officiis fuga deleniti alias quia nostrum veritatis enim doloremque eligendi?</p>
+		                     </div> <!-- /.col-md-12 -->
+		                 </div> <!-- /.row -->
+		             </div> <!-- /.container -->
+		         </div> <!-- /.bottom-footer -->
+		       </div>
+			</body>
+			</html>

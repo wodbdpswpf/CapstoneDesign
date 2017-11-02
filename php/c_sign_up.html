@@ -1,0 +1,564 @@
+<!doctype html>
+
+<html lang="ko">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet">
+
+<link rel="stylesheet" href="bootstrap.css">
+<link rel="stylesheet" href="normalize.min.css">
+<link rel="stylesheet" href="font-awesome.min.css">
+<link rel="stylesheet" href="animate.css">
+<link rel="stylesheet" href="templatemo-misc.css">
+<link rel="stylesheet" href="templatemo-style.css">
+
+<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+<head>
+  <meta charset="utf-8">
+
+  <title>구인기업_회원가입 </title>
+
+  <script type="text/javascript">
+  function checkemailaddy2(){
+    var a=document.forms[0];
+    if (a.c_email_select.value == '1') {
+      a.c_email2.readonly = false;
+      a.c_email2.value = '';
+      a.c_email2.focus();
+    }
+    else {
+      a.c_email2.readonly = true;
+      a.c_email2.value = a.c_email_select.value;
+    }
+  }
+  function checkfield2(){
+
+    var b=document.forms[0];
+
+    if(b.c_id.value==""){ //id값이 없을 경우
+      confirm("아이디를 입력하세요");         //메세지 경고창을 띄운 후
+      b.c_id.focus();     // id 텍스트박스에 커서를 위치
+      return;
+
+    }else if(b.c_password.value==""){
+      confirm("비밀번호를 입력하세요");
+      b.c_password.focus();
+      return;
+
+    }else if(b.c_check_password.value==""){
+      alert("비밀번호 확인 항목을 입력하세요");
+      b.c_check_password.focus();
+      return;
+
+    }else if(b.c_com_name.value==""){
+      alert("기업명을 입력하세요");
+      b.c_com_name.focus();
+      return;
+
+    }else if(b.c_password.value!=b.c_check_password.value){
+      //비밀번호와 비밀번호확인의 값이 다를 경우
+      alert("입력한 2개의 비밀번호가 일치하지 않습니다.");
+      b.c_check_password.focus();
+      return;
+
+
+    }else if(b.c_foundation_year.value==""){
+      alert("설립일 항목을 입력하세요");
+      b.c_foundation_year.focus();
+      return;
+
+    }else if(b.c_foundation_month.value==""){
+      alert("설립일 항목을 입력하세요");
+      b.c_foundation_month.focus();
+      return;
+
+    }else if(b.c_foundation_day.value=="" ){
+      alert("설립일 항목을 입력하세요");
+      b. c_foundation_day.focus();
+      return;
+
+    }else if(b.c_com_address.value=="" ){
+      alert("주소를 입력하세요");
+      b.c_com_address.focus();
+      return;
+
+    }else if(b.c_com_business_type.value=="" ){
+      alert("업종을 선택하세요");
+      b.c_com_business_type.focus();
+      return;
+
+    }else if (b.c_whether_listed.value=="" ){
+      alert("상장여부를 체크하세요");
+      b.c_whether_listed.focus();
+      return;
+
+    }else if (b.c_corporate_types.value=="" ){
+      alert("기업형태를 선택하세요");
+      document.b.c_corporate_types.focus();
+      return;
+
+    }else if (b.c_worker_num.value=="" ){
+      alert("사원수를 입력하세요");
+      document.b.c_worker_num.focus();
+      return;
+
+    }else if (b.c_main_business.value=="" ){
+      alert("수요 사업내용을 입력하세요");
+      b.c_main_business.focus();
+      return;
+    }else if(b.c_agree.checked==false){
+      alert("기업정보 수집에 동의하세요");
+      document.b.c_agree.focus();
+      return;
+    }
+
+    b.submit();
+
+  }
+  </script>
+  <style>
+  body {
+    margin: 0;
+  }
+  #header {
+    width: 100%;
+    background-color: #ffffff;
+  }
+  #main-content {
+    width: 100%;
+  }
+  #header li {
+    display: inline-block;
+    margin-right: 30px;
+  }
+  img {
+    max-width: 100%;
+  }
+  .form-group {
+    margin-left: auto;
+    margin-right: auto;
+    width:20%
+  }
+
+  .container-fluid{
+    float: right;
+  }
+  .content {
+  	float:center;
+  	width: auto;
+  	margin-top: 80px;
+  	height: 400px;
+
+  }
+  #left{
+  	float: left;
+  	width: 400px;
+  	margin-left: 20px;
+
+  }
+  .using-service{
+  	border: 1px gray dashed;
+  	height: 300px;
+  }
+  #right{
+  	float: right;
+  	width: 500px;
+
+  	margin-right: 50px;
+  }
+  .new-alarm{
+  	border: 1px gray dashed;
+  	height: 300px;
+  }
+  .bottom-footer {
+  	margin-top: 200px;
+
+  }
+  .contact_table button {
+  	width: auto;
+  background-color: #2d3e50;
+  color: white;
+  padding: 0 25px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0;
+  margin-top: 30px;
+  float: right;
+  margin-right: 50px;
+  }
+  .contact_table{
+  	margin-left: 250px;
+  	margin-top: 100px;
+  }
+  #table_resume{
+    width: 800px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+  }
+  #table_resume th{
+    background-color: #D5D5D5;
+    font-size: 15px;
+    color: black;
+    text-align: center;
+  }
+  #table_resume td{
+    padding: 10px;
+    text-align:left;
+  }
+  #c_basic_item_form {
+    margin-left: 200px;
+  }
+  #table_jobopening{
+    width: 800px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+  }
+  #table_jobopening th{
+    background-color: #D5D5D5;
+    font-size: 15px;
+    color: black;
+    text-align: center;
+  }
+  #table_jobopening td{
+    padding: 10px;
+    text-align: center;
+  }
+  </style>
+</head>
+<body>
+  <div class="top-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-6">
+          <div class="top-header-left">
+            <a href="c_sign_up.html">Sign Up</a>
+            <a href="loginpage.html">Log In</a>
+          </div> <!-- /.top-header-left -->
+        </div> <!-- /.col-md-6 -->
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </div> <!-- /.top-header -->
+  <div class="main-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-8">
+          <div class="logo">
+            <h1><a href="main_c.html">IT ARMY</a></h1>
+            <h5>Automatic Recruitment Matching for You</h5>
+          </div> <!-- /.logo -->
+        </div> <!-- /.col-md-4 -->
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </div> <!-- /.main-header -->
+  <div class="main-nav">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-7">
+          <div class="list-menu">
+            <ul>
+              <li><a href="main_c.html">인재정보</a></li>
+              <li><a href="search_c.html">상세검색</a></li>
+              <li><a href="mypage_c_matchingservice.html">매칭서비스</a></li>
+              <li><a href="mypage_c.html">My Page</a></li>
+            </ul>
+          </div> <!-- /.list-menu -->
+        </div> <!-- /.col-md-6 -->
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </div> <!-- /.main-nav -->
+
+  <form id="c_basic_item_form"  >
+    <table id="table_jobopening" class="tablesorter" border="1" cellpadding="1" cellspacing="1" style="border:1px white solid;">
+      <thead>
+        <tr>
+          <th style="width:50px"><input type="radio" name="sign_up" onclick="location.href='p_sign_up.html'"   id="btn_personal" value="개인회원"><label for ="btn_personal">개인회원</label></th>
+          <th style="width:50px"><input type="radio" name="sign_up" onclick="location.href='c_sign_up.html'"   id="btn_company" value="기업회원" checked=""><label for ="btn_company">기업회원</label></th>
+        </tr>
+      </thead>
+  </table>
+    <div>
+      <fieldset>
+        <legend>기본정보</legend>
+        <div>
+          <div id                                       ="c_rsPhotoBox" name="c_rsPhotoBox" class="c_rsPhotoBox">
+            <p class                                  ="c_rsPhoto">
+              <span class                             ="profile"><img src="https://fileco.\9\7\JK_GG_wodbdpswpf.jpg&amp;2016-08-03 오후 9:29:32" alt="신재경" height="130" width="100"></span> <a href="http://www./Text_User/Photo_Edit/m_photo.asp" onclick="javascript:OpenWindow_Photoup('/Text_User/Photo_Edit/m_photo.asp','590','950');return false;"><img src="/img/text_user/resume/btn_photo_reg.gif" alt="사진등록/수정"></a>
+              <a href                                 ="http://www./Text_User/Photo_Upload/M_Photo_Del.asp" onclick="javascript:Photo_Del();return false;"><img src="/img/text_user/resume/btn_photo_del.gif" alt="등록된 사진 삭제"></a>
+            </p>
+          </div>
+          <table id="table_resume" class="tablesorter" border="1" cellpadding="0" cellspacing="1" style="border:1px white solid;">
+            <tbody>
+
+              <tr>
+                <th scope ="row" colspan ="2"><span class ="blank"></span> 아이디*</th>
+                <td>
+                  <input type="text" id="c_id" name="c_id">
+                </td>
+              </tr>
+
+              <tr>
+                <th scope="row" colspan="2"><span class="blank"></span> 비밀번호*</th>
+                <td >
+                  <input type="password" id="c_password" name="c_password" >
+                </td>
+              </tr>
+
+              <tr>
+                <th scope="row" colspan="2"><span class="blank"></span> 비밀번호 확인*</th>
+                <td >
+                  <input type="password" id="c_check_password" name="c_check_password">
+                </td>
+              </tr>
+
+
+              <tr>
+                <th scope                               ="row" colspan ="2"><span class ="blank"></span>기업명*</th>
+                <td>
+                  <input type                         ="text" id="c_com_name" name="c_com_name" >
+                </td>
+              </tr>
+
+              <tr>
+                <th scope                                 ="row" colspan ="2"><span class ="blank"></span>사업자 번호*</th>
+                <td>
+                  <input type="number"  id="c_business_num1" name="c_business_num1"> <span class="delimiter" >- </span><input type="number"  id="c_business_num2" name="c_business_num2"> <span class="delimiter" >-</span> <input type="number" id="c_business_num3" name="c_business_num3">
+                </td>
+              </tr>
+
+              <tr>
+                <th scope                                 ="row" colspan ="2"><span class ="blank"></span>대표자 명</th>
+                <td>
+                  <input type                             ="text" id="c_representative" name="c_representative" >
+                </td>
+              </tr>
+
+              <tr>
+                <th scope ="row" colspan ="2"><span class ="blank"></span> 전화번호 </th>
+                <td>
+                  <select title="기업번호" id="c_num1" name="c_num1" >
+                    <option value="">기업번호</option>
+                    <option value="02">02</option>
+                  </select>
+                  <!--셀렉트박스에서 선택-->
+                  <span class="delimiter">-</span>
+                  <input type="number"  id="c_num2" name="c_num2" maxlength="4" > <span class="delimiter" > -</span> <input type="number" id="c_num3" name="c_num3" maxlength="4" >
+                </td>
+              </tr>
+
+              <tr>
+                <th scope                               ="row" colspan ="2"><span class ="blank"></span> 이메일</th>
+                <td>
+                  <form name="form" method="post">
+                    <input name="c_email1" type="text" class="box" id="c_email1" size="15"> @ <input name="c_email2" type="text" class="box" id="c_email2" size="20">
+                    <select name="c_email_select" class="box" id="c_email_select" onChange="checkemailaddy2();">
+                      <option value=""selected="">선택하세요</option>
+                      <option value="naver.com" >naver.com</option>
+                      <option value="hanmail.net">hanmail.net</option>
+                      <option value="nate.com">nate.com</option>
+                      <option value="daum.net">daum.net</option>
+                      <option value="gmail.com">gmail.com</option>
+                      <option value="1">직접입력</option>
+                    </select>
+                  </form>
+                </td>
+              </tr>
+
+              <tr>
+                <th scope ="row" colspan ="2"><span class ="blank"></span> 팩스번호 </th>
+                <td>
+                  <input type="number"  id="c_fax_num1" name="c_fax_num1"  > <span class="delimiter" > -</span> <input type="number" id="c_fax_num2" name="c_fax_num2" >
+                </td>
+              </tr>
+
+              <tr>
+                <th scope                               ="row" colspan="2"><span class="blank"></span>설립일*</th>
+                <td>
+                  <select title                       ="설립연도 선택"  id="c_foundation_year" name="c_foundation_year">
+                    <option value                     =""selected="">설립연도</option>
+                    <option value                   ="2001">2001년</option>
+                    <option value                   ="2000">2000년</option>
+
+                  </select>
+                  <select title                       ="월 선택" id="c_foundation_month" name="c_foundation_month" >
+                    <option value                     =""selected="">월</option>
+                    <option value                   ="1">1월</option>
+                    <option value                   ="2">2월</option>
+                    <option value                   ="3">3월</option>
+                    <option value                   ="4">4월</option>
+                    <option value                   ="5">5월</option>
+                    <option value                   ="6">6월</option>
+                    <option value                   ="7">7월</option>
+                    <option value                   ="8">8월</option>
+                    <option value                   ="9">9월</option>
+                    <option value                   ="10">10월</option>
+                    <option value                   ="11" >11월</option>
+                    <option value                   ="12">12월</option>
+                  </select>
+
+                  <select title                       ="일 선택"  id="c_foundation_day" name="c_foundation_day"  >
+                    <option value                     =""selected="">일</option>
+                    <option value                   ="1">1일</option>
+                    <option value                   ="2">2일</option>
+                  </select>
+                </td>
+              </tr>
+
+              <tr>
+                <th scope                               ="row" colspan="2"><span class="blank"></span> 주소*</th>
+                <td >
+                  <input type                        ="text" id="c_com_address" name="c_com_address" style="width:500px;">
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+
+
+
+
+
+
+        </div>
+      </fieldset>
+    </div>
+
+
+
+
+    <div>
+      <fieldset>
+        <legend>사업정보</legend>
+
+        <div>
+          <table id="table_resume" class="tablesorter" border="1" cellpadding="0" cellspacing="1" style="border:1px white solid;">
+            <tbody>
+
+              <tr>
+                <th scope                               ="row" colspan ="2"><span class ="blank"></span>업종*</th>
+                <td>
+                  <select id                            ="c_com_business_type"  name="c_com_business_type">
+                    <option value                       ="">업종</option>
+                    <option value                       ="0">소프트웨어 솔루션</option>
+                  </select>
+                </td>
+              </tr>
+
+              <tr>
+                <th scope                               ="row" colspan ="2"><span class ="blank"></span>상장 여부*</th>
+                <td>
+                  <input type                         ="radio" id="c_whether_listed0" name="c_whether_listed" value="0">
+                  <label for                          ="c_whether_listed0">예</label>
+                  <input type                         ="radio" id="c_whether_listed1" name="c_whether_listed" value="1" >
+                  <label for                          ="c_whether_listed1">아니요</label>
+                </td>
+              </tr>
+
+              <tr>
+                <th scope                               ="row" colspan ="2"><span class ="blank"></span>기업형태*</th>
+                <td>
+                  <select id                            ="c_corporate_types" name="c_corporate_types">
+                    <option value                       ="">기업형태</option>
+                    <option value                       ="0">중소기업</option>
+                  </select>
+                </td>
+              </tr>
+
+
+              <tr>
+                <th scope                               ="row" colspan="2"><span class="blank"></span>사원 수*</th>
+                <td>
+                  <input type                         ="number" id="c_worker_num" name="c_worker_num">&nbsp;명&nbsp;
+                </td>
+              </tr>
+
+              <tr>
+                <th scope                               ="row" colspan="2"><span class="blank"></span> 주요 사업내용*</th>
+                <td>
+                  <input type                        ="text" id="c_main_business" name="c_main_business"  style="width:500px;"  >
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </fieldset>
+    </div>
+
+
+    <div>
+      <fieldset>
+        <legend>기타정보</legend>
+
+        <div>
+          <table id="table_resume" class="tablesorter" border="1" cellpadding="0" cellspacing="1" style="border:1px white solid;">
+            <tbody>
+
+              <tr>
+                <th scope                               ="row" colspan="2"><span class="blank"></span>기업비전</th>
+                <td>
+                  <input type                        ="text" id="c_vision" name="c_vision" style="width:500px;"  >
+                </td>
+              </tr>
+
+              <tr>
+                <th scope                               ="row" colspan="2"><span class="blank"></span>인재상</th>
+                <td>
+                  <input type                        ="text" id="c_talent_type" name="c_talent_type" style="width:500px;" >
+                </td>
+              </tr>
+
+              <tr>
+                <th scope                               ="row" colspan="2"><span class="blank"></span>기업 연혁</th>
+                <td>
+                  <input type                        ="text" id="c_history" name="c_history" style="width:500px;"  >
+                </td>
+              </tr>
+
+
+
+
+
+
+            </tbody>
+          </table>
+        </div>
+      </fieldset>
+      <tr>
+        <th scope="row" colspan="2"><span class="blank"></span> </th>
+        <td >
+          <label>
+            <input id="c_agree" name="c_agree" type="checkbox" checked="">
+            기업정보 수집에 동의합니다.
+          </label>
+        </td>
+      </tr>
+    </div>
+
+    <p class="rsMainAction">
+      <button type="button" id="btn_c_join" name="btn_c_join" onclick="checkfield2()"><span>가입하기</span></button>
+    </p>
+
+  </form>
+  <div class="footer container" height = "15px">
+    <div class="bottom-footer">
+           <div class="container">
+               <div class="row">
+                   <div class="col-md-12 text-center">
+                       <span>Copyright &copy; 2084 <a href="#">Company Name</a></span>
+                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, expedita soluta mollitia accusamus ut architecto maiores cum fugiat. Pariatur ipsum officiis fuga deleniti alias quia nostrum veritatis enim doloremque eligendi?</p>
+                   </div> <!-- /.col-md-12 -->
+               </div> <!-- /.row -->
+           </div> <!-- /.container -->
+       </div> <!-- /.bottom-footer -->
+     </div>
+</body>
+</html>
