@@ -1,0 +1,385 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>IT ARMY|Automatic Recruitment Matching for You! </title>
+
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet">
+
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/bootstrap.css">
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/normalize.min.css">
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/font-awesome.min.css">
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/animate.css">
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/templatemo-misc.css">
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/templatemo-style.css">
+
+  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+  <style>
+  body {
+    margin: 0;
+  }
+  #header {
+    width: 100%;
+    background-color: #ffffff;
+  }
+  #main-content {
+    width: 100%;
+  }
+  #header li {
+    display: inline-block;
+    margin-right: 30px;
+  }
+  img {
+    max-width: 100%;
+  }
+  .form-group {
+    margin-left: auto;
+    margin-right: auto;
+    width:20%
+  }
+  .list-group {
+    float:left;
+    background: #D5D5D5;
+    width:200px;
+    margin-top: 80px;
+  }
+  .container-fluid{
+    float: right;
+  }
+
+
+  .bottom-footer {
+    margin-top: 200px;
+
+  }
+
+  #footer button{
+    width: auto;
+    background-color: #2d3e50;
+    color: white;
+    padding: 0 25px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0;
+    margin-top: 30px;
+    margin-left: 400px;
+  }
+  #footer {
+    margin-right: 30px;
+  }
+  #container {
+    margin-left: 250px;
+    margin-top: 80px;
+  }
+  .explanation{
+    background-color: #2d3e50;
+    color: white;
+    width: 900px;
+  }
+
+
+  </style>
+  <script type="text/javascript" src="C:/Users/user/Desktop/armyweb/jquery-latest.js"></script>
+  <script type="text/javascript" src="C:/Users/user/Desktop/armyweb/jquery.tablesorter.js"></script>
+</head>
+<body>
+  <div class="top-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-6">
+          <div class="top-header-left">
+            <a href="#">Sign Up</a>
+            <a href="loginpage.html">Log In</a>
+          </div> <!-- /.top-header-left -->
+        </div> <!-- /.col-md-6 -->
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </div> <!-- /.top-header -->
+  <div class="main-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-8">
+          <div class="logo">
+            <h1><a href="main.html">IT ARMY</a></h1>
+            <h5>Automatic Recruitment Matching for You</h5>
+          </div> <!-- /.logo -->
+        </div> <!-- /.col-md-4 -->
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </div> <!-- /.main-header -->
+  <div class="main-nav">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-7">
+          <div class="list-menu">
+            <ul>
+              <li><a href="#">인재정보</a></li>
+              <li><a href="search_c.html">상세검색</a></li>
+              <li><a href="mypage_c_matchingservice0.html">매칭서비스</a></li>
+              <li><a href="mypage_c.html">My Page</a></li>
+            </ul>
+          </div> <!-- /.list-menu -->
+        </div> <!-- /.col-md-6 -->
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </div> <!-- /.main-nav -->
+
+  <div class="list-group">
+    <h3 align="center"> My Page</h3>
+    <a href="mypage_c_companyinfo.html" class="list-group-item">기업정보</a>
+    <a href="mypage_c_jobopening.html" class="list-group-item">채용공고 관리</a>
+    <a href="mypage_c_contactlist0.html" class="list-group-item">컨택한 리스트</a>
+    <a href="mypage_c_applicantlist0.html" class="list-group-item">지원자 리스트</a>
+    <a href="mypage_c_memberout.html" class="list-group-item">회원탈퇴</a>
+    <a href="mypage_c_setalarm.html" class="list-group-item">알림설정</a>
+    <a href="mypage_c_payment.html" class="list-group-item active">결제</a>
+  </div>
+  <div id="container">
+    <h4>기업회원 전용</h4>
+
+      <div class="matching_service">
+        <h5>매칭관리 프로그램 서비스</h5>
+
+        <table id="table_matching_service" class="tablesorter" border="0" cellpadding="0" cellspacing="1">
+          <thead>
+            <tr>
+              <th style="width:30px"></th>
+              <th style="width:200px"></th>
+
+
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>
+                <input type="checkbox" id="ch_1m" name="matching" onclick="count_ck(this)"/>
+              </td>
+              <td>  1개월 프로그램 ----- 300,000 </td>
+
+
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="ch_2m" name="matching" onclick="count_ck(this)"/>
+              </td>
+              <td>  2개월 프로그램 ----- 500,000 </td>
+
+
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="ch_3m" name="matching" onclick="count_ck(this)"/>
+              </td>
+              <td>3개월 프로그램 ----- 700,000 </td>
+
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+      <div class="extra_service">
+        <h5>부가 서비스</h5>
+        <table id="table_extra_service" class="tablesorter" border="0" cellpadding="0" cellspacing="1">
+          <thead>
+            <tr>
+              <th style="width:30px"></th>
+              <th style="width:200px"></th>
+
+
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>
+                <input type="checkbox" id="ch_10add" name="add" onclick="count_ck1(this)"/>
+              </td>
+              <td>매칭 리스트 10개 추가 ----- 50,000 </td>
+
+
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="ch_20add" name="add" onclick="count_ck1(this)"/>
+              </td>
+              <td>매칭 리스트 20개 추가 ----- 80,000 </td>
+
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <div class="preminum_service">
+        <h5>프리미엄 채용공고 노출 서비스 (won/일) </h5>
+        <table id="table_premium_service" class="tablesorter" border="0" cellpadding="0" cellspacing="1">
+          <thead>
+            <tr>
+              <th style="width:30px"></th>
+              <th style="width:200px"></th>
+
+
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>
+                <input type="checkbox" id="ch_mainpage"/>
+              </td>
+              <td>  메인 홈페이지 채용공고  노출 ----- 300,000 </td>
+
+
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="ch_searchpage"/>
+              </td>
+              <td>  검색 홈페이지  채용공고 노출 ----- 200,000  </td>
+
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="ch_anotherpage"/>
+              </td>
+              <td>  업직종별 홈페이지 채용공고 노출 ----- 100,000  </td>
+
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+      <div class="search_service">
+        <h5>인재정보 조회 서비스 (won/일) </h5>
+        <table id="table_search_service" class="tablesorter" border="0" cellpadding="0" cellspacing="1">
+          <thead>
+            <tr>
+              <th style="width:30px"></th>
+              <th style="width:200px"></th>
+
+
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>
+                <input type="checkbox" id="ch_500time" name="search" onclick="count_ck2(this)"/>
+              </td>
+              <td>500건 인재 정보 조회----- 200,000  </td>
+
+
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="ch_300time" name="search" onclick="count_ck2(this)"/>
+              </td>
+              <td>300건 인재 정보 조회 ----- 150,000 </td>
+
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="ch_100time" name="search" onclick="count_ck2(this)"/>
+              </td>
+              <td>100건 인재 정보 조회 ----- 100,000 </td>
+
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+      <div class="explanation">
+        <p>
+          매칭 관리 서비스는 서로에게 적합한 구직자와 구인기업을
+매칭 시켜주는 서비스입니다.</p>
+
+<p>
+
+ 인재 상위 노출 서비스는 자신의 이력서를
+페이지의 상단에 등재 시켜 반복 노출을 가능하게 하는
+서비스입니다.
+</p>
+<p>
+인재 정보 조회 서비스는 구직자의 인재 정보 상세 내용을 확인할 수 있도록 하는 서비스입니다.
+
+        </p>
+      </div>
+
+    </div>
+
+  <hr />
+  <div id="footer" class="total" align="right">
+    <h5>
+      총 결제 금액 : -------------- 680,000
+    </h5>
+    <button id="btn_payment">결제하기</button>
+  </div>
+
+
+  <div class="footer container" height = "15px">
+    <div class="bottom-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <span>Copyright &copy; 2084 <a href="#">Company Name</a></span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, expedita soluta mollitia accusamus ut architecto maiores cum fugiat. Pariatur ipsum officiis fuga deleniti alias quia nostrum veritatis enim doloremque eligendi?</p>
+          </div> <!-- /.col-md-12 -->
+        </div> <!-- /.row -->
+      </div> <!-- /.container -->
+    </div> <!-- /.bottom-footer -->
+  </div>
+
+</body>
+<script>
+function count_ck(obj){
+            var chkbox = document.getElementsByName("matching");
+            var chkCnt = 0;
+            for(var i=0;i<chkbox.length; i++){
+              if(chkbox[i].checked){
+                chkCnt++;
+              }
+            }
+            if(chkCnt>1){
+              alert("1개만 선택 가능합니다.");
+              obj.checked = false;
+              return false;
+            }
+          }
+          function count_ck1(obj){
+            var chkbox = document.getElementsByName("add");
+            var chkCnt = 0;
+            for(var i=0;i<chkbox.length; i++){
+              if(chkbox[i].checked){
+                chkCnt++;
+              }
+            }
+            if(chkCnt>1){
+              alert("1개만 선택 가능합니다.");
+              obj.checked = false;
+              return false;
+            }
+          }
+            function count_ck2(obj){
+              var chkbox = document.getElementsByName("search");
+              var chkCnt = 0;
+              for(var i=0;i<chkbox.length; i++){
+                if(chkbox[i].checked){
+                  chkCnt++;
+                }
+              }
+              if(chkCnt>1){
+                alert("1개만 선택 가능합니다.");
+                obj.checked = false;
+                return false;
+              }
+          }</script>
+</html>

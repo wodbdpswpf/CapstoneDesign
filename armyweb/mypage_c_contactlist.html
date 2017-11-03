@@ -1,0 +1,287 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>IT ARMY|Automatic Recruitment Matching for You! </title>
+
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet">
+
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/bootstrap.css">
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/normalize.min.css">
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/font-awesome.min.css">
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/animate.css">
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/templatemo-misc.css">
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/templatemo-style.css">
+
+  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+<style>
+  body {
+    margin: 0;
+  }
+  #header {
+    width: 100%;
+    background-color: #ffffff;
+  }
+  #main-content {
+    width: 100%;
+  }
+  #header li {
+    display: inline-block;
+    margin-right: 30px;
+  }
+  img {
+    max-width: 100%;
+  }
+  .form-group {
+    margin-left: auto;
+    margin-right: auto;
+    width:20%
+  }
+  .list-group {
+    float:left;
+    background: #D5D5D5;
+    width:200px;
+    margin-top: 80px;
+  }
+  .container-fluid{
+    float: right;
+  }
+  .content {
+    float:center;
+    width: auto;
+    margin-top: 80px;
+    height: 400px;
+
+  }
+  #left{
+    float: left;
+    width: 400px;
+    margin-left: 20px;
+
+  }
+  .using-service{
+    border: 1px gray dashed;
+    height: 300px;
+  }
+  #right{
+    float: right;
+    width: 500px;
+
+    margin-right: 50px;
+  }
+  .new-alarm{
+    border: 1px gray dashed;
+    height: 300px;
+  }
+  .bottom-footer {
+    margin-top: 200px;
+
+  }
+  .contact_table button {
+    width: auto;
+ background-color: #2d3e50;
+ color: white;
+ padding: 0 25px;
+ font-size: 14px;
+ text-transform: uppercase;
+ font-weight: 700;
+ margin: 0;
+ margin-top: 30px;
+ float: right;
+ margin-right: 50px;
+  }
+  .contact_table{
+    margin-left: 250px;
+    margin-top: 100px;
+  }
+  #table_contact{
+    width: 800px;
+    margin-top: 30px;
+
+  }
+  #table_contact th{
+    background-color: #368AFF;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+  }
+  #table_contact td{
+    padding: 10px;
+    text-align: center;
+  }
+
+
+
+  </style>
+</head>
+<body>
+  <div class="top-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-6">
+          <div class="top-header-left">
+            <a href="#">Sign Up</a>
+            <a href="loginpage.html">Log In</a>
+          </div> <!-- /.top-header-left -->
+        </div> <!-- /.col-md-6 -->
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </div> <!-- /.top-header -->
+  <div class="main-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-8">
+          <div class="logo">
+            <h1><a href="main.html">IT ARMY</a></h1>
+            <h5>Automatic Recruitment Matching for You</h5>
+          </div> <!-- /.logo -->
+        </div> <!-- /.col-md-4 -->
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </div> <!-- /.main-header -->
+  <div class="main-nav">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-7">
+          <div class="list-menu">
+            <ul>
+              <li><a href="#">인재정보</a></li>
+              <li><a href="search_c.html">상세검색</a></li>
+              <li><a href="mypage_c_matchingservice0.html">매칭서비스</a></li>
+              <li><a href="mypage_c.html">My Page</a></li>
+            </ul>
+          </div> <!-- /.list-menu -->
+        </div> <!-- /.col-md-6 -->
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </div> <!-- /.main-nav -->
+
+  <div class="list-group">
+    <h3 align="center"> My Page</h3>
+    <a href="mypage_c_companyinfo.html" class="list-group-item">기업정보</a>
+    <a href="mypage_c_jobopening.html" class="list-group-item">채용공고 관리</a>
+    <a href="mypage_c_contactlist0.html" class="list-group-item active">컨택한 리스트</a>
+    <a href="mypage_c_applicantlist0.html" class="list-group-item">지원자 리스트</a>
+    <a href="mypage_c_memberout.html" class="list-group-item">회원탈퇴</a>
+    <a href="mypage_c_setalarm.html" class="list-group-item">알림설정</a>
+    <a href="mypage_c_payment.html" class="list-group-item">결제</a>
+  </div>
+
+  <div class="contact_table">
+    <!-- Default panel contents -->
+    <h4>컨택한 리스트</h4>
+    <!-- Table -->
+
+    <table id="table_contact" class="tablesorter" border="0" cellpadding="0" cellspacing="1">
+      <thead>
+        <tr>
+          <th style="width:30px"></th>
+          <th style="width:70px">이름</th>
+          <th style="width:90px">이력서정보</th>
+          <th style="width:120px">희망지역/연봉</th>
+          <th style="width:100px">컨택수신여부</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="first_row">
+          <td>
+            <input type="checkbox" />
+          </td>
+          <td>Peter</td>
+          <td>Parker</td>
+          <td>28</td>
+          <td>$9.99</td>
+
+
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" />
+          </td>
+          <td>John</td>
+          <td>Hood</td>
+          <td>33</td>
+          <td>$19.99</td>
+
+
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" />
+          </td>
+          <td>Clark</td>
+          <td>Kent</td>
+          <td>18</td>
+          <td>$15.89</td>
+
+
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" />
+          </td>
+          <td>Bruce</td>
+          <td>Almighty</td>
+          <td>45</td>
+          <td>$153.19</td>
+
+
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" />
+          </td>
+          <td>Bruce</td>
+          <td>Evans</td>
+          <td>22</td>
+          <td>$13.19</td>
+
+
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" />
+          </td>
+          <td>Bruce</td>
+          <td>Evans</td>
+          <td>22</td>
+          <td>$13.19</td>
+
+
+        </tr>
+      </tbody>
+    </table>
+    <button id="btn_cancel">선택컨택취소</button>
+  </div>
+  <div class="footer container" height = "15px">
+    <div class="bottom-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <span>Copyright &copy; 2084 <a href="#">Company Name</a></span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, expedita soluta mollitia accusamus ut architecto maiores cum fugiat. Pariatur ipsum officiis fuga deleniti alias quia nostrum veritatis enim doloremque eligendi?</p>
+          </div> <!-- /.col-md-12 -->
+        </div> <!-- /.row -->
+      </div> <!-- /.container -->
+    </div> <!-- /.bottom-footer -->
+
+
+  </div>
+  <script>
+  $(document).ready(function()
+  {
+    $("#table_contact").tablesorter();
+  }
+);
+</script>
+
+</body>
+</html>

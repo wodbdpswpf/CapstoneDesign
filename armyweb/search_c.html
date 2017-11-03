@@ -1,0 +1,334 @@
+<!doctype html>
+
+<html lang ="ko">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>IT ARMY|Automatic Recruitment Matching for You! </title>
+
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet">
+
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/bootstrap.css">
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/normalize.min.css">
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/font-awesome.min.css">
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/animate.css">
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/templatemo-misc.css">
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/templatemo-style.css">
+
+  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+  <style>
+  body {
+    margin: 0;
+  }
+  #header {
+    width: 100%;
+    background-color: #ffffff;
+  }
+  #main-content {
+    width: 100%;
+  }
+  #header li {
+    display: inline-block;
+    margin-right: 30px;
+  }
+  img {
+    max-width: 100%;
+  }
+  .form-group {
+    margin-left: auto;
+    margin-right: auto;
+    width:auto;
+  }
+  .list-group {
+    float:left;
+    background: #D5D5D5;
+    width:200px;
+  }
+  .container-fluid{
+    float: right;
+  }
+  table.tablesorter thead tr .header {
+    background-image: url(bg.gif);
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+    width: auto;
+  }
+  .search_set{
+    margin-top: 40px;
+    width:800px;
+    border: 2px gray dashed;
+    margin-left: 300px;
+    line-height: 300%;
+  }
+  .search_result{
+    margin-top: 60px;
+  }
+
+  #table_search_result{
+    width: 800px;
+
+  }
+  #table_search_result th{
+    background-color: #368AFF;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+  }
+  #table_search_result td{
+    padding: 10px;
+    text-align: center;
+  }
+  .bottom-footer {
+    margin-top: 40px;
+  }
+
+  </style>
+  <script type="text/javascript" src="C:/Users/user/Desktop/armyweb/jquery-latest.js"></script>
+  <script type="text/javascript" src="C:/Users/user/Desktop/armyweb/jquery.tablesorter.js"></script>
+</head>
+
+<body>
+  <div class="top-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-6">
+          <div class="top-header-left">
+            <a href="#">Sign Up</a>
+            <a href="loginpage.html">Log In</a>
+          </div> <!-- /.top-header-left -->
+        </div> <!-- /.col-md-6 -->
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </div> <!-- /.top-header -->
+  <div class="main-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-8">
+          <div class="logo">
+            <h1><a href="main.html">IT ARMY</a></h1>
+            <h5>Automatic Recruitment Matching for You</h5>
+          </div> <!-- /.logo -->
+        </div> <!-- /.col-md-4 -->
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </div> <!-- /.main-header -->
+  <div class="main-nav">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-7">
+          <div class="list-menu">
+            <ul>
+              <li><a href="#">인재정보</a></li>
+              <li><a href="search_c.html">상세검색</a></li>
+              <li><a href="mypage_c_matchingservice0.html">매칭서비스</a></li>
+              <li><a href="mypage_c.html">My Page</a></li>
+            </ul>
+          </div> <!-- /.list-menu -->
+        </div> <!-- /.col-md-6 -->
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </div> <!-- /.main-nav -->
+
+  <form>
+    <div class="search_set" align="center">
+      <table summary ="">
+        <tbody>
+       <div>
+         <tr>
+           <th scope ="row" colspan="2" width="80px">성별</th>
+           <td>
+             <input type     ="radio" id="c_search_sex1" name="c_search_sex" value="1">
+             <label for      ="c_search_sex1">남자</label>
+             <input type     ="radio" id="c_search_sex2" name="c_search_sex" value="2" >
+             <label for      ="c_search_sex2">여자</label>
+             <input type     ="radio" id="c_search_sex3" name="c_search_sex" value="3">
+             <label for      ="c_search_sex3">무관</label>
+           </td>
+         </tr>
+       </div>
+
+
+       <div>
+         <tr>
+           <th scope ="row" colspan="2" width="80px"><span class="blank"></span>학력</th>
+           <td>
+             <select title ="학력 선택" id="c_search_academic" name="c_search_academic">
+               <option value ="" selected="">학력</option>
+             </select>이상
+           </td>
+         </tr>
+       </div>
+
+
+
+       <div>
+         <tr>
+           <th scope ="row" colspan="2" width="80px"><span class="blank"></span>업/직종</th>
+           <td>
+             <select title ="업/직종 선택" id="c_search_business_type1" name="c_search_business_type1">
+               <option value ="" selected="">업/직종</option>
+             </select>
+
+             <select title ="업/직종 선택" id="c_search_business_type2" name="c_search_business_type2">
+               <option value ="" selected="">업/직종</option>
+             </select>
+           </td>
+         </tr>
+       </div>
+
+
+       <div>
+         <tr>
+           <th scope ="row" colspan="2" width="80px"><span class="blank"></span>직급</th>
+           <td>
+             <select title ="직급 선택" id="c_search_position" name="c_search_position">
+               <option value ="" selected="">직급</option>
+             </select>
+           </td>
+         </tr>
+       </div>
+
+
+       <div>
+         <tr>
+           <th scope ="row" colspan="2" width="80px"><span class="blank"></span>급여</th>
+           <td>
+             <select title ="급여 선택" id="c_search_wages" name="c_search_wages">
+               <option value ="" selected="">급여</option>
+             </select>이상
+           </td>
+         </tr>
+       </div>
+
+     </tbody>
+   </table>
+      <div class="search">
+
+        <input type="submit" class="s-button" id="btn_search" value="검색" name="Search" align="right">
+      </div>
+    </div>
+  </form>
+
+  <div class="search_result" align="center">
+    <table id="table_search_result" class="tablesorter" border="0" cellpadding="0" cellspacing="1">
+      <thead>
+          <tr>
+
+            <th style="width:70px">이름</th>
+            <th style="width:90px">이력서정보</th>
+            <th style="width:120px">희망지역/연봉</th>
+
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+
+            <td>Peter</td>
+            <td>Parker</td>
+            <td>28</td>
+
+
+          </tr>
+          <tr>
+
+            <td>John</td>
+            <td>Hood</td>
+            <td>33</td>
+
+
+          </tr>
+          <tr>
+
+            <td>Clark</td>
+            <td>Kent</td>
+            <td>18</td>
+
+
+          </tr>
+          <tr>
+
+            <td>Bruce</td>
+            <td>Almighty</td>
+            <td>45</td>
+
+
+          </tr>
+          <tr>
+
+            <td>Bruce</td>
+            <td>Evans</td>
+            <td>22</td>
+
+
+          </tr>
+          <tr>
+
+            <td>Bruce</td>
+            <td>Evans</td>
+            <td>22</td>
+
+
+          </tr>
+        </tbody>
+    </table>
+</div>
+    <div class="page_search" align="center">
+
+      <nav class="center">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Previous</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">4</a></li>
+          <li class="page-item"><a class="page-link" href="#">5</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Next</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+  <div class="footer container" height = "15px">
+    <div class="bottom-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <span>Copyright &copy; 2084 <a href="#">Company Name</a></span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, expedita soluta mollitia accusamus ut architecto maiores cum fugiat. Pariatur ipsum officiis fuga deleniti alias quia nostrum veritatis enim doloremque eligendi?</p>
+          </div> <!-- /.col-md-12 -->
+        </div> <!-- /.row -->
+      </div> <!-- /.container -->
+    </div> <!-- /.bottom-footer -->
+
+
+  </div>
+  <script>
+  $(document).ready(function()
+  {
+    $("#table_search_result").tablesorter();
+  }
+);
+</script>
+
+
+</body>
+</html>

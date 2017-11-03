@@ -1,0 +1,655 @@
+
+<!doctype html>
+
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>IT ARMY|Automatic Recruitment Matching for You! </title>
+
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet">
+
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/bootstrap.css">
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/normalize.min.css">
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/font-awesome.min.css">
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/animate.css">
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/templatemo-misc.css">
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/templatemo-style.css">
+
+  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+  <style>
+  <style>
+  body {
+    margin: 0;
+  }
+  #header {
+    width: 100%;
+    background-color: #ffffff;
+  }
+  #main-content {
+    width: 100%;
+  }
+  #header li {
+    display: inline-block;
+    margin-right: 30px;
+  }
+  img {
+    max-width: 100%;
+  }
+  .form-group {
+    margin-left: auto;
+    margin-right: auto;
+    width:20%
+  }
+  .list-group {
+    float:left;
+    background: #D5D5D5;
+    width:200px;
+    margin-top: 80px;
+  }
+  .container-fluid{
+    float: right;
+  }
+
+
+  .bottom-footer {
+    margin-top: 200px;
+
+  }
+  .content {
+    margin-top: 100px;
+    margin-left: 300px;
+
+  }
+  .content button{
+    width: auto;
+    background-color: #2d3e50;
+    color: white;
+    padding: 0 25px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0;
+    margin-left: 700px;
+    margin-top: 20px;
+  }
+
+  #table_matching_set{
+    width: 800px;
+    margin-top: 30px;
+  }
+  #table_matching_set th{
+    background-color: #368AFF;
+    font-size: 13px;
+    color: white;
+    text-align: center;
+  }
+  #table_matching_set td{
+    padding: 10px;
+    text-align: center;
+  }
+
+  table.tablesorter thead tr .header {
+    background-image: url(bg.gif);
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+    width: auto;
+  }
+  .autocontact{
+    margin-right: 100px;
+  }
+  </style>
+
+
+  <script type="text/javascript" src="C:/Users/user/Desktop/armyweb/jquery-latest.js"></script>
+  <script type="text/javascript" src="C:/Users/user/Desktop/armyweb/jquery.tablesorter.js"></script>
+
+</head>
+<body>
+  <div class="top-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-6">
+          <div class="top-header-left">
+            <a href="#">Sign Up</a>
+            <a href="loginpage.html">Log In</a>
+          </div> <!-- /.top-header-left -->
+        </div> <!-- /.col-md-6 -->
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </div> <!-- /.top-header -->
+  <div class="main-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-8">
+          <div class="logo">
+            <h1><a href="main.html">IT ARMY</a></h1>
+            <h5>Automatic Recruitment Matching for You</h5>
+          </div> <!-- /.logo -->
+        </div> <!-- /.col-md-4 -->
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </div> <!-- /.main-header -->
+  <div class="main-nav">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-7">
+          <div class="list-menu">
+            <ul>
+              <li><a href="#">채용정보</a></li>
+              <li><a href="search_j.html">상세검색</a></li>
+              <li><a href="mypage_j_matchingservice0.html">매칭서비스</a></li>
+              <li><a href="mypage_j.html">My Page</a></li>
+            </ul>
+          </div> <!-- /.list-menu -->
+        </div> <!-- /.col-md-6 -->
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </div> <!-- /.main-nav -->
+
+  <div class="list-group">
+    <h3 align="center"> 매칭 서비스</h3>
+    <a href="mypage_j_matchingservice0.html" class="list-group-item active">매칭설정</a>
+    <a href="mypage_j_payment.html" class="list-group-item">결제</a>
+    <a href="mypage_j_matchinglist.html" class="list-group-item" >매칭 리스트</a>
+
+  </div>
+
+  <div class="content">
+    <!-- Default panel contents -->
+    <h3>개인회원 전용</h3>
+    <p>
+      더 정확한 매칭서비스를 위해 중요항목을 체크해주세요!
+    </p>
+    <div id="matching">
+      <div class="matching_set">
+
+        <table id="table_matching_set" class="tablesorter" border="0" cellpadding="0" cellspacing="1">
+          <thead>
+            <tr>
+              <th style="width:60px" align="center">사용항목</th>
+              <th style="width:300px" colspan="2" align="center">매칭설정</th>
+              <th style="width:60px" align="center">필수</th>
+              <th style="width:60px" align="center">매우중요<p>
+                (3개)</p></th>
+                <th style="width:60px" align="center">보통중요<p>
+                  (5개)</p></th>
+                  <th style="width:60px" align="center">일반<p>
+                    (나머지)</p></th>
+
+                  </tr>
+                </thead>
+                <tbody>
+
+                  <tr>
+                    <td>
+                      <input type="checkbox" id="ch_duty"/>
+                    </td>
+                    <td></td>
+                    <td>직무,직급</td>
+                    <td>
+                      <input type="checkbox" name="duty" id="duty_man"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="vi" id="duty_vi" onclick="count_ck(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="avg" id="duty_avg" onclick="count_ck1(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="duty" id="duty_nor"/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" id="ch_ind"/>
+                    </td>
+                    <td></td>
+                    <td>업종</td>
+                    <td>
+                      <input type="checkbox" name="ind" id="ind_man"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="vi" id="ind_vi" onclick="count_ck(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="avg" id="ind_avg" onclick="count_ck1(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="age" id="ind_nor"/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" id="ch_loca"/>
+                    </td>
+                    <td></td>
+                    <td>근무지역</td>
+                    <td>
+                      <input type="checkbox" name="loca" id="loca_man"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="vi" id="loca_vi" onclick="count_ck(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="avg" id="loca_avg" onclick="count_ck1(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="loca" id="loca_nor"/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" id="ch_wage"/>
+                    </td>
+                    <td></td>
+                    <td>연봉</td>
+                    <td>
+                      <input type="checkbox" name="wage" id="wage_man"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="vi" id="wage_vi" onclick="count_ck(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="avg" id="wage_avg" onclick="count_ck1(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="wage" id="wage_nor"/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" id="ch_ctype"/>
+                    </td>
+                    <td></td>
+                    <td>기업형태</td>
+                    <td>
+                      <input type="checkbox" name="ctype" id="ctype_man"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="vi" id="ctype_vi" onclick="count_ck(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="avg" id="ctype_avg" onclick="count_ck1(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="ctype" id="ctype_nor"/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" id="ch_day"/>
+                    </td>
+                    <td></td>
+                    <td>근무요일</td>
+                    <td>
+                      <input type="checkbox" name="day" id="day_man"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="vi" id="day_vi" onclick="count_ck(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="avg" id="day_avg" onclick="count_ck1(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="day" id="day_nor"/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" id="ch_age"/>
+                    </td>
+                    <td></td>
+                    <td>나이</td>
+                    <td>
+                      <input type="checkbox" name="age" id="age_man"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="vi" id="age_vi" onclick="count_ck(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="avg" id="age_avg" onclick="count_ck1(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="age" id="age_nor"/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" id="ch_htype"/>
+                    </td>
+                    <td></td>
+                    <td>고용형태</td>
+                    <td>
+                      <input type="checkbox" name="htype" id="htype_man"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="vi" id="htype_vi" onclick="count_ck(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="avg" id="htype_avg" onclick="count_ck1(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="htype" id="htype_nor"/>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <input type="checkbox" id="ch_sex"/>
+                    </td>
+                    <td></td>
+                    <td>성별</td>
+                    <td>
+                      <input type="checkbox" name="sex" id="sex_man"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="vi" id="sex_vi" onclick="count_ck(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="avg" id="sex_avg" onclick="count_ck1(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="sex" id="sex_nor"/>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <input type="checkbox" id="ch_edu"/>
+                    </td>
+                    <td></td>
+                    <td>학력</td>
+                    <td>
+                      <input type="checkbox" name="edu" id="edu_man"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="vi" id="edu_vi" onclick="count_ck(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="avg" id="edu_avg" onclick="count_ck1(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="edu" id="edu_nor"/>
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" id="ch_major"/>
+                    </td>
+                    <td></td>
+                    <td>전공</td>
+                    <td>
+                      <input type="checkbox" name="major" id="major_man"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="vi" id="major_vi" onclick="count_ck(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="avg" id="major_avg" onclick="count_ck1(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="major" id="major_nor"/>
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" id="ch_certi"/>
+                    </td>
+                    <td></td>
+                    <td>일반자격증</td>
+                    <td>
+                      <input type="checkbox" name="certi" id="certi_man"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="vi" id="certi_vi" onclick="count_ck(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="avg" id="certi_avg" onclick="count_ck1(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="certi" id="certi_nor"/>
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" id="ch_flan"/>
+                    </td>
+                    <td></td>
+                    <td>외국어성적</td>
+                    <td>
+                      <input type="checkbox" name="flan" id="flan_man"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="vi" id="flan_vi" onclick="count_ck(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="avg" id="flan_avg" onclick="count_ck1(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="flan" id="flan_nor"/>
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" id="ch_course"/>
+                    </td>
+                    <td></td>
+                    <td>이수교과목</td>
+                    <td>
+                      <input type="checkbox" name="course" id="course_man"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="vi" id="course_vi" onclick="count_ck(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="avg" id="course_avg" onclick="count_ck1(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="course" id="course_nor"/>
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" id="ch_itcerti"/>
+                    </td>
+                    <td></td>
+                    <td>IT자격증</td>
+                    <td>
+                      <input type="checkbox" name="itcerti" id="itcerti_man"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="vi" id="itcerti_vi" onclick="count_ck(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="avg" id="itcerti_avg" onclick="count_ck1(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="itcerti" id="itcerti_nor"/>
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" id="ch_ide"/>
+                    </td>
+                    <td></td>
+                    <td>사용가능언어/IDE</td>
+                    <td>
+                      <input type="checkbox" name="ide" id="ide_man"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="vi" id="ide_vi" onclick="count_ck(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="avg" id="ide_avg" onclick="count_ck1(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="ide" id="ide_nor"/>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <input type="checkbox" id="ch_career"/>
+                    </td>
+                    <td rowspan="2"> 경력</td>
+                    <td>업종</td>
+                    <td>
+                      <input type="checkbox" name="c_ind" id="c_ind_man"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="vi" id="c_ind_vi" onclick="count_ck(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="avg" id="c_ind_avg" onclick="count_ck1(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="c_ind" id="c_ind_nor"/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+
+                    </td>
+                    <td>기간+직무
+                    </td>
+                    <td>
+                      <input type="checkbox" name="c_du" id="c_du_man"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="vi" id="c_du_vi" onclick="count_ck(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="avg" id="c_du_avg" onclick="count_ck1(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="c_du" id="c_du_nor"/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" id="ch_project"/>
+                    </td>
+                    <td rowspan="3"> 프로젝트</td>
+                    <td>기간+사용언어/IDE</td>
+                    <td>
+                      <input type="checkbox" name="p_ide" id="p_ide_man"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="vi" id="p_ide_vi" onclick="count_ck(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="avg" id="p_ide_avg" onclick="count_ck1(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="p_ide" id="p_ide_nor"/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+
+                    </td>
+                    <td>개발SW분야
+                    </td>
+                    <td>
+                      <input type="checkbox" name="p_sw" id="p_sw_man"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="vi" id="p_sw_vi" onclick="count_ck(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="avg" id="p_sw_avg" onclick="count_ck1(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="p_sw" id="p_sw_nor"/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+
+                    </td>
+                    <td>그외정보
+                    </td>
+                    <td>
+                      <input type="checkbox" name="p_other" id="p_other_man"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="vi" id="p_other_vi" onclick="count_ck(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="avg" id="p_other_avg" onclick="count_ck1(this)"/>
+                    </td>
+                    <td>
+                      <input type="checkbox" name="p_other" id="p_other_nor"/>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+              <script>
+
+
+              function count_ck(obj){
+                var chkbox = document.getElementsByName("vi");
+                var chkCnt = 0;
+                for(var i=0;i<chkbox.length; i++){
+                  if(chkbox[i].checked){
+                    chkCnt++;
+                  }
+                }
+                if(chkCnt>3){
+                  alert("3개만 선택 가능합니다.");
+                  obj.checked = false;
+                  return false;
+                }
+              }
+              function count_ck1(obj){
+                var chkbox = document.getElementsByName("avg");
+                var chkCnt = 0;
+                for(var i=0;i<chkbox.length; i++){
+                  if(chkbox[i].checked){
+                    chkCnt++;
+                  }
+                }
+                if(chkCnt>5){
+                  alert("5개만 선택 가능합니다.");
+                  obj.checked = false;
+                  return false;
+                }
+              }
+
+              </script>
+              <button id="btn_save">저장</button>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="footer container" height = "15px">
+          <div class="bottom-footer">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 text-center">
+                  <span>Copyright &copy; 2084 <a href="#">Company Name</a></span>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, expedita soluta mollitia accusamus ut architecto maiores cum fugiat. Pariatur ipsum officiis fuga deleniti alias quia nostrum veritatis enim doloremque eligendi?</p>
+                </div> <!-- /.col-md-12 -->
+              </div> <!-- /.row -->
+            </div> <!-- /.container -->
+          </div> <!-- /.bottom-footer -->
+        </div>
+
+      </body>
+      </html>

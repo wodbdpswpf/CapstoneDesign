@@ -1,0 +1,157 @@
+<!doctype html>
+
+<html lang="ko">
+<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<head>
+  <meta charset="utf-8">
+  <title>IT ARMY|Automatic Recruitment Matching for You! </title>
+  <style>
+  body {
+    margin: 0;
+  }
+  #header {
+    width: 100%;
+    background-color: #ffffff;
+  }
+  #main-content {
+    width: 100%;
+  }
+  #header li {
+    display: inline-block;
+    margin-right: 30px;
+  }
+  img {
+    max-width: 100%;
+  }
+  .form-group {
+    margin-left: auto;
+    margin-right: auto;
+    width:20%
+  }
+  .list-group {
+    float:left;
+    background: #D5D5D5;
+    width:200px;
+  }
+  .container-fluid{
+    float: right;
+  }
+
+  </style>
+</head>
+<body>
+  <div id="header">
+    <nav class="navbar navbar-default">
+
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img alt="Brand" src="C:\Users\user\Desktop\logo.png">
+        </a>
+      </div>
+    </nav>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <ul class="lnb">
+          <li>
+            <a href="#">로그아웃</a>
+          </li>
+
+        </ul>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="list_menu">
+        <ul class="nav navbar-nav">
+
+          <li><a href="#">채용정보</a></li>
+          <li><a href="#">상세검색</a></li>
+          <li><a href="#">매칭서비스</a></li>
+          <li><a href="mypage_c.html">My Page</a></li>
+
+        </ul>
+      </div><!-- /.navbar-collapse -->
+
+    </nav>
+  </div>
+  <div class="list-group">
+    <h3> 매칭 서비스</h3>
+    <a href="mypage_c_matchingservice.html" class="list-group-item">매칭설정</a>
+    <a href="mypage_c_payment.html" class="list-group-item">결제</a>
+    <a href="mypage_c_matchingservice_list.html" class="list-group-item active">매칭 리스트</a>
+
+  </div>
+  <div class="container">
+    <h4>기업회원 전용</h4>
+    <p>
+      매칭리스트를 조회 하고싶은 공고의 항목을 클릭하세요!
+      </p>
+
+    <table id="table_jobopening" class="tablesorter" border="0" cellpadding="0" cellspacing="1">
+      <thead>
+        <tr>
+  <th style="width:30px"></th>
+          <th style="width:70px">회사명</th>
+          <th style="width:70px">채용내역</th>
+          <th style="width:70px">지원자격</th>
+          <th style="width:70px">마감일</th>
+
+
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td>
+            <input type="checkbox" />
+          </td>
+          <td>Peter</td>
+          <td>Parker</td>
+          <td>28</td>
+          <td>$9.99</td>
+
+
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" />
+          </td>
+          <td>John</td>
+          <td>Hood</td>
+          <td>33</td>
+          <td>$19.99</td>
+
+
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" />
+          </td>
+          <td>Clark</td>
+          <td>Kent</td>
+          <td>18</td>
+          <td>$15.89</td>
+
+
+        </tr>
+
+      </tbody>
+    </table>
+    <a href="mypage_c_matchingservice_result.html">
+        <button type="submit" id="btn_matching_search">선택 조회하기</button>
+      </a>
+
+  </div>
+
+</body>
+</html>

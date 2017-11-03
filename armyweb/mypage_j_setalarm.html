@@ -1,0 +1,206 @@
+<!doctype html>
+
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>IT ARMY|Automatic Recruitment Matching for You! </title>
+
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet">
+
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/bootstrap.css">
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/normalize.min.css">
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/font-awesome.min.css">
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/animate.css">
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/templatemo-misc.css">
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/templatemo-style.css">
+
+  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+  <style>
+  body {
+    margin: 0;
+  }
+  #header {
+    width: 100%;
+    background-color: #ffffff;
+  }
+  #main-content {
+    width: 100%;
+  }
+  #header li {
+    display: inline-block;
+    margin-right: 30px;
+  }
+  img {
+    max-width: 100%;
+  }
+  .form-group {
+    margin-left: auto;
+    margin-right: auto;
+    width:20%
+  }
+  .list-group {
+    float:left;
+    background: #D5D5D5;
+    width:200px;
+    margin-top: 80px;
+  }
+  .container-fluid{
+    float: right;
+  }
+
+  .bottom-footer {
+    margin-top: 400px;
+
+  }
+  .alarm-set {
+    margin-top: 100px;
+    margin-left: 400px;
+
+  }
+  .alarm-set button{
+    width: auto;
+    background-color: #2d3e50;
+    color: white;
+    padding: 0 25px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0;
+    margin-top: 30px;
+  }
+  #table_alarm {
+
+    font-size: 15px;
+    padding: 20px;
+    text-align: center;
+
+  }
+
+
+  </style>
+</head>
+<body>
+  <div class="top-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-6">
+          <div class="top-header-left">
+            <a href="#">Sign Up</a>
+            <a href="loginpage.html">Log In</a>
+          </div> <!-- /.top-header-left -->
+        </div> <!-- /.col-md-6 -->
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </div> <!-- /.top-header -->
+  <div class="main-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-8">
+          <div class="logo">
+            <h1><a href="main.html">IT ARMY</a></h1>
+            <h5>Automatic Recruitment Matching for You</h5>
+          </div> <!-- /.logo -->
+        </div> <!-- /.col-md-4 -->
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </div> <!-- /.main-header -->
+  <div class="main-nav">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-7">
+          <div class="list-menu">
+            <ul>
+              <li><a href="#">채용정보</a></li>
+              <li><a href="search_j.html">상세검색</a></li>
+              <li><a href="mypage_j_matchingservice0.html">매칭서비스</a></li>
+              <li><a href="mypage_j.html">My Page</a></li>
+            </ul>
+          </div> <!-- /.list-menu -->
+        </div> <!-- /.col-md-6 -->
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </div> <!-- /.main-nav -->
+
+
+  <div class="list-group">
+    <h3 align="center"> My Page</h3>
+    <a href="mypage_j_personalinfo.html" class="list-group-item">개인정보</a>
+    <a href="mypage_j_resume.html" class="list-group-item">이력서 관리</a>
+    <a href="mypage_j_applylist.html" class="list-group-item">지원한 리스트</a>
+    <a href="mypage_j_contactlist.html" class="list-group-item">컨택받은 리스트</a>
+    <a href="mypage_j_memberout.html" class="list-group-item">회원탈퇴</a>
+    <a href="mypage_j_setalarm.html" class="list-group-item active">알림설정</a>
+    <a href="mypage_j_payment.html" class="list-group-item">결제</a>
+  </div>
+
+  <div class="alarm-set">
+    <h4>알림설정</h4>
+    <table id="table_alarm" border="0" cellpadding="0" cellspacing="1">
+      <thead>
+        <tr>
+          <th style="width:200px"></th>
+          <th style="width:50px">ON</th>
+          <th style="width:50px">OFF</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>컨택받은내역 알림설정</td>
+          <td>
+            <input type="radio" id="contact_on" name="contact" value="contact_on" checked="" data-href="#">
+          </td>
+          <td>
+            <input type="radio" id="contact_off" name="contact" value="contact_off" data-href="#">
+          </td>
+
+
+
+        </tr>
+        <tr>
+          <td>매칭 알림설정</td>
+          <td>
+              <input type="radio" id="matching_on" name="matching" value="matching_on" checked="" data-href="#">
+
+          </td>
+          <td>
+          <input type="radio" id="matching_off" name="matching" value="matching_off" data-href="#">
+          </td>
+
+
+        </tr>
+      </tbody>
+    </table>
+    <div class="wrap_style align-center">
+      <a href="mypage_j_matching_alarm.html">
+        <button type="submit" id="btn_matching_alarm">매칭 알림내역 보기</button>
+      </a>
+      <a href="mypage_j_apply_alarm.html">
+        <button type="submit" id="btn_apply_alarm">지원 알림내역 보기</button>
+      </a>
+
+      </div>
+    </div>
+
+    <div class="footer container" height = "15px">
+      <div class="bottom-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <span>Copyright &copy; 2084 <a href="#">Company Name</a></span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, expedita soluta mollitia accusamus ut architecto maiores cum fugiat. Pariatur ipsum officiis fuga deleniti alias quia nostrum veritatis enim doloremque eligendi?</p>
+            </div> <!-- /.col-md-12 -->
+          </div> <!-- /.row -->
+        </div> <!-- /.container -->
+      </div> <!-- /.bottom-footer -->
+    </div>
+
+
+  </body>
+  </html>

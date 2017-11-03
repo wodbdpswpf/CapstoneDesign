@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>IT ARMY|Automatic Recruitment Matching for You! </title>
+
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet">
+
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/bootstrap.css">
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/normalize.min.css">
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/font-awesome.min.css">
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/animate.css">
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/templatemo-misc.css">
+  <link rel="stylesheet" href="C:/Users/user/Desktop/armyweb/templatemo-style.css">
+
+  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+<style>
+body {
+  margin: 0;
+}
+#header {
+  width: 100%;
+  background-color: #ffffff;
+}
+#main-content {
+  width: 100%;
+}
+#header li {
+  display: inline-block;
+  margin-right: 30px;
+}
+img {
+  max-width: 100%;
+}
+.form-group {
+  margin-left: auto;
+  margin-right: auto;
+  width:20%
+}
+.list-group {
+  float:left;
+  background: #D5D5D5;
+  width:200px;
+  margin-top: 80px;
+}
+.container-fluid{
+  float: right;
+}
+#content {
+  float:center;
+  width: auto;
+  margin-top: 80px;
+  height: 400px;
+  margin-left: 200px;
+
+}
+
+.bottom-footer {
+  margin-top: 200px;
+
+}
+.memberout {
+  margin-top: 100px;
+  margin-left: 400px;
+
+}
+.memberout button{
+  width: auto;
+  background-color: #2d3e50;
+  color: white;
+  padding: 0 25px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0;
+  margin-top: 30px;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="top-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-6">
+          <div class="top-header-left">
+            <a href="#">Sign Up</a>
+            <a href="loginpage.html">Log In</a>
+          </div> <!-- /.top-header-left -->
+        </div> <!-- /.col-md-6 -->
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </div> <!-- /.top-header -->
+  <div class="main-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-8">
+          <div class="logo">
+            <h1><a href="main.html">IT ARMY</a></h1>
+            <h5>Automatic Recruitment Matching for You</h5>
+          </div> <!-- /.logo -->
+        </div> <!-- /.col-md-4 -->
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </div> <!-- /.main-header -->
+  <div class="main-nav">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-7">
+          <div class="list-menu">
+            <ul>
+              <li><a href="#">인재정보</a></li>
+              <li><a href="search_c.html">상세검색</a></li>
+              <li><a href="mypage_c_matchingservice0.html">매칭서비스</a></li>
+              <li><a href="mypage_c.html">My Page</a></li>
+            </ul>
+          </div> <!-- /.list-menu -->
+        </div> <!-- /.col-md-6 -->
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </div> <!-- /.main-nav -->
+
+  <div class="list-group">
+    <h3 align="center"> My Page</h3>
+    <a href="mypage_c_companyinfo.html" class="list-group-item">기업정보</a>
+    <a href="mypage_c_jobopening.html" class="list-group-item">채용공고 관리</a>
+    <a href="mypage_c_contactlist0.html" class="list-group-item">컨택한 리스트</a>
+    <a href="mypage_c_applicantlist0.html" class="list-group-item">지원자 리스트</a>
+    <a href="mypage_c_memberout.html" class="list-group-item active">회원탈퇴</a>
+    <a href="mypage_c_setalarm.html" class="list-group-item">알림설정</a>
+    <a href="mypage_c_payment.html" class="list-group-item">결제</a>
+  </div>
+
+  <div id ="content">
+
+    <div class ="memberout">
+      <h3>회원탈퇴</h3>
+      <table id="table_memberout">
+
+        <tbody>
+          <tr>
+            <th scope ="row" colspan ="2" width="70px"><label for ="lb_id"><span class ="blank"></span> 아이디</label></th>
+            <td>
+              <div class="social_row"><strong>아이디를 받아오자</strong>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row" colspan="2" width="70px"><span class="blank"></span> 비밀번호 </th>
+            <td colspan="3">
+              <div class ="mbrHelpWrap">
+                <input type="text" class="ipText" id="password" name="password" size="12" maxlength="12" value="" style="width:130px;">
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button type="submit" id="btn_memberout" onclick="myFunction()">회원탈퇴</button>
+    </div>
+
+  </div>
+  <div class="footer container" height = "15px">
+    <div class="bottom-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <span>Copyright &copy; 2084 <a href="#">Company Name</a></span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, expedita soluta mollitia accusamus ut architecto maiores cum fugiat. Pariatur ipsum officiis fuga deleniti alias quia nostrum veritatis enim doloremque eligendi?</p>
+          </div> <!-- /.col-md-12 -->
+        </div> <!-- /.row -->
+      </div> <!-- /.container -->
+    </div> <!-- /.bottom-footer -->
+  </div>
+  <script>
+  function myFunction() {
+    var x;
+    if (confirm("탈퇴 하시겠습니까?") == true) {
+      x = "탈퇴 되었습니다!";
+      location.href ='main.html';
+
+    } else {
+      x = "취소 되었습니다!";
+    }
+    document.getElementById("demo").innerHTML = x;
+  }
+  </script>
+</body>
+</html>
